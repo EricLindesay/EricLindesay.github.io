@@ -26,3 +26,13 @@
     min-width: 200px;
     background-color: whitesmoke;
 }
+
+#profile_widget {
+    font: "helvetica";
+    font-size: large;
+}
+
+#name {
+    font-weight: bold;
+    font-size: larger;
+}
