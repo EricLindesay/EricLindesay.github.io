@@ -1,0 +1,28 @@
+.icon {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+#pfp {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.outer {
+    padding: 20px;
+    height: 100%;
+    flex-wrap: wrap;
+    background-color: lightgrey;
+}
+
+.left {
+    padding: 10%;
+    flex: 1;
+    float: left;
+    width: 50%;
+    text-align: center;
+    min-width: 200px;
+    background-color: whitesmoke;
+}
