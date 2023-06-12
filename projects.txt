@@ -1,0 +1,23 @@
+Projects
+
+Coursework
+Min set cover AI in java for AIM
+Tank game in C++
+MIST in C++ with Qt
+Process and IO simulator in C
+Snake in Java
+Dijkstra's server-client in C
+Minesweeper in ARM assembly
+Word counter in HDL
+
+Personal project
+Dream keeper mobile app in android
+cfutils in Python
+matrix command line tool in Python
+BlockRacingLeague in Processing
+competitive programming stuff in C++
+website
+
+What is it?
+Justification for it
+Things learnt
