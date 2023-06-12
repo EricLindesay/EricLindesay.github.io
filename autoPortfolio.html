@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eric Lindesay Portfoilio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <style>
+        div {
+            /* border: 2px dotted red; */
+        }
+    </style>
+    <link rel="stylesheet" href="boostrapSS.css">
+</head>
+
+<body class="grey_background">
+    <p class="text-center">Portfolio - Make this title better</p>
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col" id="MIST">
+    <div class="card shadow-sm">
+        <img src="projectImages/mist.png">
+        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
+        <div class="card-subtitle text-muted fst-italic px-3">University of Nottingham</div>
+        <div class="card-body">
+            <p class="text-danger">NEED TO MANUALLY CHECK</p>
+            <p>
+                This was a group project under the supervision of the University in my second year. For this project, I was the Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
+            </p>
+            <div class="collapse pt-lg-2" id="MISTSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    The university assigned us this project for my second year group project which took the entire year. This was developed for Dr. Xin Chen who was our supervisor. This software is useful for clinicians when they want to segment an image, for example quickly separate a certain group of cells or an organ from the rest of the image. The output from this program could also be used to train an AI model which would allow for automatic segmentation.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This project built on a previous program developed by the supervisor <linked here> and our task was to convert it to another language to make it faster as well as modernising the GUI. To develop the GUI we used Qt in C++ and for the segmentation we used OpenCV as well as a pre-provided library. To load the medical image formats (NIfTI and DICOM) and to save the images as NIfTI, we used VTK.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    For this project, I received TBC%. <2D demo> and <3D demo> show the program working for both 2D and 3D segmentations.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                    data-target="#MISTSeeMore" data-parent="#MIST">Toggle see more</button>
+                <small class="text-body-secondary fst-italic">2022 - 2023</small>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

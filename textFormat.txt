@@ -1,0 +1,9 @@
+nickname | 
+image | 
+title | 
+subtitle | 
+main | 
+motivation | 
+description | 
+result | 
+date | 
