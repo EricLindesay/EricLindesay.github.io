@@ -1,0 +1,12 @@
+.grey_background {
+    background-color: lightgrey;
+}
+
+.white_background {
+    background-color: whitesmoke;
+}
+
+.my-card {
+    width: 18rem;
+    height: 18rem;
+}
