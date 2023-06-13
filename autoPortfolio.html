@@ -25,7 +25,10 @@
 </head>
 
 <body class="grey_background">
-    <p class="text-center">Portfolio - Make this title better</p>
+    <p class="text-center">
+        Portfolio - Make this title bette. Also improve the repo link to make it something else. I
+        don't like it as is
+    </p>
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3">
@@ -56,8 +59,19 @@
             </div>
 
             <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                    data-target="#MISTSeeMore" data-parent="#MIST">Toggle see more</button>
+                <div id="MIST">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="MISTSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="MISTSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"></input>
+                    </div>
+                </div>
                 <small class="text-body-secondary fst-italic">2022 - 2023</small>
             </div>
         </div>
@@ -89,9 +103,64 @@
             </div>
 
             <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                    data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding">Toggle see more</button>
-                <small class="text-body-secondary fst-italic">2022 - 2023</small>
+                <div id="CompetitiveCoding">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="CompetitiveCodingSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="CompetitiveCodingSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022 - Present</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="cfutils">
+    <div class="card shadow-sm">
+        <img src="projectImages/cfutils.png">
+        <div class="card-title px-3 pt-3">cfutils</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/cfutils">Repository Link</a><br><br>This is a command line utility Python program that I made to accompany my codeforces challenges (<b>c</b>ode<b>f</b>orces <b>utils</b>). This tool can automatically create the READMEs for the codeforces challenges if given the url. It can also list all the challenges I have attempted, with some useful filters. E.g. filtering by difficulty and only show incomplete problems.
+            </p>
+            <div class="collapse pt-lg-2" id="cfutilsSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    To create the READMEs I initially copy and pasted from the codeforces website and then manually formatted it but this took a few minutes which adds up over time and makes me less motivated to do the problems. To automate this, I made this Python tool. For convenience, I also created a Python program which allows me to list problems I have attempted and also to filter that list.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    The two commands that I use most frequently in this project are cfsetup which takes a url and generates the README and cflist which lists the problems.<br><br>Cfsetup works using the requests library to get the website's HTML and then parse it to get the name, difficulty, description and test cases which are then put into the README. It then makes a directory for the problem, putting it in the right difficulty directory.<br><br>Cflist looks at the directory structure and gets the names and difficulties of the different problems. It also reads the READMEs to get the tags associated for the problem and whether the problem is solved or not and then displays it onto the command line.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    The resulting program is very useful, particularly cflist which allows me to easily return to problems if they take me more than a day to solve. Due to it looking at the HTML, cfsetup doesn't always produce correctly formatted output as the problem may include a scenario I didn't expect for the test cases and certain special characters may not convert properly. However, this isn't a large issue as most of the content will be put into the README meaning that the time to fix the formatting is much less than the time required to copy the data manually.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="cfutils">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="cfutilsSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="cfutilsSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022</small>
             </div>
         </div>
     </div>

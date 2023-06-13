@@ -16,7 +16,7 @@ def formatTextFile(format: str, filename: str) -> str:
 if __name__ == "__main__":
     formatFileText = "portfolioFormat.html"
     formatFileEntire = "entireFormat.html"
-    textFiles = ["MIST.txt", "competitiveCoding.txt"]
+    textFiles = ["MIST.txt", "competitiveCoding.txt", "cfutils.txt"]
     destFile = f"autoPortfolio.html"
 
     # read the format file
