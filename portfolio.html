@@ -32,14 +32,58 @@
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3">
-                <div class="col" id="dreamKeeper">
+                <div class="col" id="aimCW">
+    <div class="card shadow-sm">
+        <img src="projectImages/aimCoursework.png">
+        <div class="card-title px-3 pt-3">MIN-SET-COVER problem AI</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Univeristy of Nottingham</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                This was a piece of coursework as part of second year at the University. We had to develop an AI to solve the MIN-SET-COVER problem. In this problem, you get given a set of resources and you have to use the minimal number of resources to satisfy your needs which, as you can imagine, is a common problem. An example use is "if you have N programmers who each know a set of programming languages, what are the minimum number of programmers required to cover every programming language?".<br><br>This problem is a NP-hard combinatorial optimisation problem (COP). This means you cannot solve this problem in polynomial time (it must be exponential time for example) so we need to use AI to solve it within a reasonable time frame, especially as the number of resources get high.
+            </p>
+            <div class="collapse pt-lg-2" id="aimCWSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    This was a coursework I was very interested in, AI is fascinating and I was very interested in learning how it works in more detail which was a requirement for the coursework as we had to implement it from scratch.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    For the coursework, we had to develop a learning hyper-heuristic AI with elaborate move acceptance (I used simulated annealing with reheating using a geometric cooling schedule).<br><br>We had to use Java. This allowed us to form an understanding of how AI works "under-the-hood" without the abstraction which libraries can give you since we weren't allowed to use any libraries.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    This coursework was very enjoyable, one of the most enjoyable I've had so far. I really enjoyed implementing all of the heuristics I chose and tuning the parameters (using Taguchi Orthogonal Arrays) to get perfect results from the test cases we were given.<br><br>For this coursework I got a grade of 90% which I am very pleased with.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="aimCW">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="aimCWSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="aimCWSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2023</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="dreamKeeper">
     <div class="card shadow-sm">
         <img src="projectImages/dreamKeeper.png">
         <div class="card-title px-3 pt-3">Dream Keeper</div>
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
         <div class="card-body">
             <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/dreamKeeper" target="_blank">Repository Link</a><br><br>This is an Android app I developed for myself which I use to record my dreams, storing them in a local RoomDB database. This was developed in Android Studio and was my first attempt at an Android app which I think went pretty well.
+                <a href="https://github.com/EricLindesay/dreamKeeper" target="_blank">Repository Link</a><br><br>This is an Android app I developed for myself which I use to record my dreams, storing them in a local Room database. This was developed in Android Studio and was my first attempt at an Android app which I think went pretty well.
             </p>
             <div class="collapse pt-lg-2" id="dreamKeeperSeeMore">
                 <p class="border-top">
