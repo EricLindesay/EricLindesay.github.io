@@ -1,3 +1,14 @@
+def readTextFileNames(orderFile: str) -> list[str]:
+    '''
+    Each filename is written on a newline, so just get that
+    '''
+    lines = []
+    with open(orderFile, "r") as f:
+        lines = f.readlines()
+
+    return [line.strip() for line in lines]
+
+
 def formatTextFile(format: str, filename: str) -> str:
     # read the text info file and format it
     replacementLines = ""
@@ -16,8 +27,10 @@ def formatTextFile(format: str, filename: str) -> str:
 if __name__ == "__main__":
     formatFileText = "portfolioFormat.html"
     formatFileEntire = "entireFormat.html"
-    textFiles = ["MIST.txt", "competitiveCoding.txt", "cfutils.txt"]
-    destFile = f"autoPortfolio.html"
+
+    textFiles: list[str] = readTextFileNames("portfolioText/projectOrder.txt")
+
+    destFile = f"portfolio.html"
 
     # read the format file
     formatStr = ""

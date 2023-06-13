@@ -25,184 +25,237 @@
 </head>
 
 <body class="grey_background">
-    <p class="text-center">Portfolio - Make this title better</p>
+    <p class="text-center">
+        Portfolio - Make this title bette. Also improve the repo link to make it something else. I
+        don't like it as is
+    </p>
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
-                <div class="col" id="MIST">
-                    <div class="card shadow-sm">
-                        <img src="projectImages/mist.png">
-                        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
-                        <div class="card-subtitle text-muted fst-italic px-3">University of Nottingham</div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                This was a group project under the supervision of the University in my second year.
-                                For this project, I was the Team Leader so I allocated work across the 7 team members
-                                and made sure people
-                                were doing work to a high quality, as well as writing reports and participating in
-                                presentations.
-                            </p>
-                            <p class="card-text">
-                                I contributed to the code by being the main developer of the front-end which uses the Qt
-                                framework in C++.
-                            </p>
-
-                            <div class="collapse pt-lg-2" id="MISTSeeMore">
-                                <p class="border-top">
-                                    <br>
-                                    This software allows users to segment medical images. This is very useful for
-                                    clinicians,
-                                    especially with tumour and organ monitoring. If a clinician suspects you may
-                                    have a
-                                    tumour,
-                                    they can get the result of a CT scan and then use this software to segment the
-                                    image and
-                                    then,
-                                    a month later, they can get another scan, segment the image again and then
-                                    compare the
-                                    two results
-                                    and give an informed diagnosis to the patient.
-
-                                    This project could be used to train an AI model yada yada.
-                                </p>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                                    data-target="#MISTSeeMore" data-parent="#MIST">Toggle see more</button>
-                                <small class="text-body-secondary fst-italic">2022 - 2023</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col" id="MIST">
-                    <div class="card shadow-sm">
-                        <img src="projectImages/mist.png">
-                        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
-                        <div class="card-subtitle text-muted fst-italic px-3">University of Nottingham</div>
-                        <div class="card-body">
-                            <p class="text-danger">NEED TO MANUALLY CHECK</p>
-                            <p>
-                                This was a group project under the supervision of the University in my second year. For
-                                this
-                                project, I was
-                                the Team Leader so I allocated work across the 7 team members and made sure people were
-                                doing work to a high
-                                quality, as well as writing reports and participating in presentations.
-                                <br>
-                                I contributed to the code by being the main developer of the front-end which uses the Qt
-                                framework in C++.
-                            </p>
-                            <div class="collapse pt-1" id="MISTSeeMore">
-                                <p class="border-top">
-                                    <br>
-                                    Motivation
-                                    <br>
-                                    The university assigned us this project for my second year group project. This was
-                                    developed for Dr.
-                                    Xin Chen who was our supervisor. This software is useful for clinicians when they
-                                    want to segment an
-                                    image, for example quickly separate a certain group of cells or an organ from the
-                                    rest of the image.
-                                    The output from this program could also be used to train an AI model which would
-                                    allow for automatic
-                                    segmentation.
-                                    <br><br>
-                                    Description
-                                    <br>
-                                    This project built on a previous program developed by the supervisor <linked here>
-                                        and our task was
-                                        to convert it to another language to make it faster as well as modernising the
-                                        GUI. To develop
-                                        the GUI we used Qt in C++ and for the segmentation we used OpenCV as well as a
-                                        pre-provided
-                                        library. To load the medical image formats (NIfTI and DICOM) and to save the
-                                        images as NIfTI, we
-                                        used VTK.
-                                        <br><br>
-                                        Result
-                                        <br>
-                                        For this project, I received TBC%. <2D demo> and <3D demo> show the program
-                                                working for both 2D
-                                                and 3D segmentations.
-                                </p>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                                    data-target="#MISTSeeMore" data-parent="#MIST">Toggle see more</button>
-                                <small class="text-body-secondary fst-italic">2022 - 2023</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3">
+                <div class="col" id="dreamKeeper">
+    <div class="card shadow-sm">
+        <img src="projectImages/dreamKeeper.png">
+        <div class="card-title px-3 pt-3">Dream Keeper</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/dreamKeeper" target="_blank">Repository Link</a><br><br>This is an Android app I developed for myself which I use to record my dreams, storing them in a local RoomDB database. This was developed in Android Studio and was my first attempt at an Android app which I think went pretty well.
+            </p>
+            <div class="collapse pt-lg-2" id="dreamKeeperSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    I have very vivid dreams and they are interesting so I like to write them down. To do this I was using a note taking app but it didn't have all the functionality I wanted, I wanted better tagging and searching for tags and dates as well as an easy way to add a new dream. So I created this app.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This app allows you to write new dreams and search on dreams you have already written. You can search by date range (e.g. from 01/05/2023 - 31/05/2023, by text in the dream and by tag). Additionally, you can copy the content of a dream after writing it, allowing for easy copy and paste to other locations (I use it to share my dreams with my friends).<br><br>A feature which it was very important for me to include was a home screen widget (shown in the picture at the top). I wanted this widget to make access to the app faster and so that I can look at the dreams through the home screen, without having to open the app fully, and to quickly press the '+' icon to add a new dream through the widget.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    I use the app every time I have a dream and (in my opinion) it is very simple to use. The app isn't currently uploaded to the app store however I may consider uploading it in the future. If I were to upload it to the app store, I would probably add more features to the app such as allowing custom ordering for dreams (right now it sorted by date) and a way to allow the user to export and import dreams. I have not added these features yet as the app is just for my own use and I know I would not use those features.
+                </p>
             </div>
 
-            <div class="col" id="MIST">
-                <div class="card shadow-sm">
-                    <img src="projectImages/mist.png">
-                    <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
-                    <div class="card-subtitle text-muted fst-italic px-3">University of Nottingham</div>
-                    <div class="card-body">
-                        <p class="text-danger">NEED TO MANUALLY CHECK</p>
-                        <p>
-                            This was a group project under the supervision of the University in my second year. For this
-                            project, I
-                            was the Team Leader so I allocated work across the 7 team members and made sure people were
-                            doing work
-                            to a high quality, as well as writing reports and participating in presentations.<br>I
-                            contributed to
-                            the code by being the main developer of the front-end which uses the Qt framework in C++.
-                        </p>
-                        <div class="collapse pt-lg-2" id="MISTSeeMore">
-                            <p class="border-top">
-                                <br>
-                                <b>Motivation</b>
-                                <br>
-                                The university assigned us this project for my second year group project. This was
-                                developed for Dr.
-                                Xin Chen who was our supervisor. This software is useful for clinicians when they want
-                                to segment an
-                                image, for example quickly separate a certain group of cells or an organ from the rest
-                                of the image.
-                                The output from this program could also be used to train an AI model which would allow
-                                for automatic
-                                segmentation.
-                                <br><br>
-                                <b></b>Description</b>
-                                <br>
-                                This project built on a previous program developed by the supervisor <linked here> and
-                                    our task was
-                                    to convert it to another language to make it faster as well as modernising the GUI.
-                                    To develop
-                                    the GUI we used Qt in C++ and for the segmentation we used OpenCV as well as a
-                                    pre-provided
-                                    library. To load the medical image formats (NIfTI and DICOM) and to save the images
-                                    as NIfTI, we
-                                    used VTK.
-                                    <br><br>
-                                    <b>Result</b>
-                                    <br>
-                                    For this project, I received TBC%. <2D demo> and <3D demo> show the program working
-                                            for both 2D
-                                            and 3D segmentations.
-                            </p>
-                        </div>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                                data-target="#MISTSeeMore" data-parent="#MIST">Toggle see more</button>
-                            <small class="text-body-secondary fst-italic">2022 - 2023</small>
-                        </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="dreamKeeper">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="dreamKeeperSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="dreamKeeperSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="Hide"></input>
                     </div>
                 </div>
+                <small class="text-body-secondary fst-italic">2022</small>
             </div>
         </div>
     </div>
+</div><div class="col" id="website">
+    <div class="card shadow-sm">
+        <img src="projectImages/ericlindesay.png">
+        <div class="card-title px-3 pt-3">ericlindesay.com</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <p class="text-danger">If the CV page changes, make sure to update this image</p><a href="https://github.com/EricLindesay/website" target="_blank">Repository Link</a><br><br>This is the website that you are currently looking at! It is written in HTML using Bootstrap.
+            </p>
+            <div class="collapse pt-lg-2" id="websiteSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    In my opinion, it is quite professional when you have a website of your own, so I wanted to make one. It also has allowed me to learn and become comfortable with Bootstrap which will be useful for web development in the future.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This website uses Bootstrap and consists of two pages, the CV page and the Portfolio page. Additionally, while developing this site, I created a quick Python program to automatically format the Portfolio page. I can give it a templated text file with the project's information and it automatically generates the cards which you can see here.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    Well you can see the result of this project for yourself.
+                </p>
+            </div>
 
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="website">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="websiteSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#websiteSeeMore" data-parent="#website" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="websiteSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#websiteSeeMore" data-parent="#website" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2023</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="MIST">
+    <div class="card shadow-sm">
+        <img src="projectImages/mist.png">
+        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <p class="text-danger">Update this with mark when I receive it</p><br>This was a group project under the supervision of the University in my second year. For this project, I was the Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
+            </p>
+            <div class="collapse pt-lg-2" id="MISTSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    The university assigned us this project for my second year group project which took the entire year. This was developed for Dr. Xin Chen who was our supervisor. This software is useful for clinicians when they want to segment an image, for example quickly separate a certain group of cells or an organ from the rest of the image. The output from this program could also be used to train an AI model which would allow for automatic segmentation.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This project built on a previous program developed by the supervisor available within <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169260721006088" target="_blank">this paper</a> and our task was to convert it to another language to make it faster as well as modernising the GUI. To develop the GUI we used Qt in C++ (which also allowed us to create an installer) and for the segmentation we used OpenCV as well as a pre-provided library. To load the medical image formats (NIfTI and DICOM) and to save the images as NIfTI, we used VTK.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    For this project, I received <p class="text-danger">TBC%</p>. <a href="https://youtu.be/STxGjxNRmA8" target="_blank">This 2D demo</a> and <a href="https://youtu.be/VtxBrwWJ4DM" target="_blank">this 3D demo</a> show the program working for both 2D and 3D segmentations.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="MIST">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="MISTSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="MISTSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022 - 2023</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="CompetitiveCoding">
+    <div class="card shadow-sm">
+        <img src="projectImages/codeforces.png">
+        <div class="card-title px-3 pt-3">Competitive Coding Problems</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/codeforces" target="_blank">Repository Link</a><br><br>I enjoy doing competitive coding problems. They are difficult but very enjoyable, especially when you complete the problem. The main website I use for this is <a href="https://www.codeforces.com" target="_blank">codeforces</a> however I sometimes do challenges from other websites such as <a href="https://leetcode.com/" target="_blank">leetcode</a>, <a href="https://www.codewars.com/" target="_blank">codewars</a> and <a href="https://www.hackerrank.com/" target="_blank">hackerrank</a>.
+            </p>
+            <div class="collapse pt-lg-2" id="CompetitiveCodingSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    The reason I do these challenges is because of how much fun I have doing them. I enjoy solving the problems and then optimising my answer so that it passes the harsh time limited test cases. Another reason is that I wanted to learn C++ and these problems have taught me a lot, especially with what data structures to use when.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    These problems all very massively, some of them are mathematical, others use dynamic programming and others use graph theory. Codeforces ranks questions based on a difficulty which increments by 100. My attempts are sorted in the directories based on this difficulty and have a README which describes the problem and my thought process towards the solution. Most of these problems are solved in C++ however some of them use other languages such as Python.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    So far, all codeforces problems I have completed are documented within the GitHub repo linked above, showing the problem as well as my thought process behind my solution.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="CompetitiveCoding">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="CompetitiveCodingSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="CompetitiveCodingSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022 - Present</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="cfutils">
+    <div class="card shadow-sm">
+        <img src="projectImages/cfutils.png">
+        <div class="card-title px-3 pt-3">cfutils</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/cfutils" target="_blank">Repository Link</a><br><br>This is a command line utility Python program that I made to accompany my codeforces challenges (<b>c</b>ode<b>f</b>orces <b>utils</b>). This tool can automatically create the READMEs for the codeforces challenges if given the url. It can also list all the challenges I have attempted, with some useful filters. E.g. filtering by difficulty and only show incomplete problems.
+            </p>
+            <div class="collapse pt-lg-2" id="cfutilsSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    To create the READMEs I initially copy and pasted from the codeforces website and then manually formatted it but this took a few minutes which adds up over time and makes me less motivated to do the problems. To automate this, I made this Python tool. For convenience, I also created a Python program which allows me to list problems I have attempted and also to filter that list.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    The two commands that I use most frequently in this project are cfsetup which takes a url and generates the README and cflist which lists the problems.<br><br>Cfsetup works using the requests library to get the website's HTML and then parse it to get the name, difficulty, description and test cases which are then put into the README. It then makes a directory for the problem, putting it in the right difficulty directory.<br><br>Cflist looks at the directory structure and gets the names and difficulties of the different problems. It also reads the READMEs to get the tags associated for the problem and whether the problem is solved or not and then displays it onto the command line.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    The resulting program is very useful, particularly cflist which allows me to easily return to problems if they take me more than a day to solve. Due to it looking at the HTML, cfsetup doesn't always produce correctly formatted output as the problem may include a scenario I didn't expect for the test cases and certain special characters may not convert properly. However, this isn't a large issue as most of the content will be put into the README meaning that the time to fix the formatting is much less than the time required to copy the data manually.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="cfutils">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="cfutilsSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="cfutilsSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022</small>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
