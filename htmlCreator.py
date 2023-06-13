@@ -1,6 +1,3 @@
-import re
-
-
 def formatTextFile(format: str, filename: str) -> str:
     # read the text info file and format it
     replacementLines = ""
@@ -12,15 +9,14 @@ def formatTextFile(format: str, filename: str) -> str:
         line.strip()
         split = line.split(" | ")
         split[1] = split[1].replace("\\n", "<br>").strip()
-        searchStr = "{{"+split[0]+"}}"
-        format = format.replace(searchStr, split[1])
+        format = format.replace("{{"+split[0]+"}}", split[1])
     return format
 
 
 if __name__ == "__main__":
     formatFileText = "portfolioFormat.html"
     formatFileEntire = "entireFormat.html"
-    textFiles = ["MIST.txt"]
+    textFiles = ["MIST.txt", "competitiveCoding.txt"]
     destFile = f"autoPortfolio.html"
 
     # read the format file
@@ -31,7 +27,7 @@ if __name__ == "__main__":
     # read and format the text files
     resultStr = ""
     for file in textFiles:
-        resultStr += formatTextFile(formatStr, file)
+        resultStr += formatTextFile(formatStr, "portfolioText/"+file)
 
     # read the format file for the entire html file
     formatEntireStr = ""

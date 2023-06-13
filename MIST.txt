@@ -1,9 +1,0 @@
-nickname | MIST
-image | mist.png
-title | Medical Image Segmentation Tool (MIST)
-subtitle | University of Nottingham
-main | This was a group project under the supervision of the University in my second year. For this project, I was the Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.\nI contributed to the code by being the main developer of the front-end which uses the Qt framework in C++. 
-motivation | The university assigned us this project for my second year group project which took the entire year. This was developed for Dr. Xin Chen who was our supervisor. This software is useful for clinicians when they want to segment an image, for example quickly separate a certain group of cells or an organ from the rest of the image. The output from this program could also be used to train an AI model which would allow for automatic segmentation.
-description | This project built on a previous program developed by the supervisor <linked here> and our task was to convert it to another language to make it faster as well as modernising the GUI. To develop the GUI we used Qt in C++ and for the segmentation we used OpenCV as well as a pre-provided library. To load the medical image formats (NIfTI and DICOM) and to save the images as NIfTI, we used VTK.
-result | For this project, I received TBC%. <2D demo> and <3D demo> show the program working for both 2D and 3D segmentations. 
-date | 2022 - 2023
