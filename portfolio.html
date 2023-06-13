@@ -21,108 +21,111 @@
             /* border: 2px dotted red; */
         }
     </style>
-    <link rel="stylesheet" href="boostrapSS.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<body class="grey_background">
-    <p class="text-center">
-        Portfolio - Make this title bette. Also improve the repo link to make it something else. I
-        don't like it as is
-    </p>
-    <div class="album py-5 bg-body-tertiary">
+<body class="bg-body-secondary">
+    <div class="row justify-content-center row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3 m-5">
+        <div class="container rounded">
+            <p class="col text-center py-5 fs-1 fw-bolder bg-white">
+                Portfolio
+            </p>
+        </div>
+    </div>
+    <div class="album">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3">
-                <div class="col" id="matrix">
+                <div class="col" id="MIST">
     <div class="card shadow-sm">
-        <img src="projectImages/matrix.png">
-        <div class="card-title px-3 pt-3">Matrix Calculator</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <img src="images/portfolio/mist.png">
+        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
         <div class="card-body">
             <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/matrixCalculator" target="_blank">Repository Link</a><br><br>This is a Python command line tool for matrix maths using argparse and multipledispatch. It was created as a supplement to my learning in the Mathematics for Computer Scientists 2 (MCS2) module.
+                <p class="text-danger">Update this with mark when I receive it</p><br>This was a group project under the supervision of the University in my second year. For this project, I was the Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
             </p>
-            <div class="collapse pt-lg-2" id="matrixSeeMore">
+            <div class="collapse pt-lg-2" id="MISTSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
                     <br>
-                    In MCS2, we covered matrix maths and manipulation. To help me understand and remember the operations, I created this python program. Additionally, it allowed me to easily create questions for myself and then compare the result to the program's output to see whether I got the question correct or not.<br><br>Another reason I wanted to do this project is (before starting this project) I recently learnt operator overloading in Python so I used this project as an excuse to use and gain familiarity with the functions.
+                    The university assigned us this project for my second year group project which took the entire year. This was developed for Dr. Xin Chen who was our supervisor. This software is useful for clinicians when they want to segment an image, for example quickly separate a certain group of cells or an organ from the rest of the image. The output from this program could also be used to train an AI model which would allow for automatic segmentation.
                     <br><br>
                     <b>Description</b>
                     <br>
-                    This command line tool allows for 16 commands, based on content that we covered in MCS2. It consists of two main files, matrix.py and matrixLib.py. Matrix.py calls matrixLib.py and is just used for command line arguments and the interpretation of those arguments while matrixLib.py does all of the computation. It also has unit tests using the unittest package which is the first time I used that package and was very useful for confirming the functions were correct.
+                    This project built on a previous program developed by the supervisor available within <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169260721006088" target="_blank">this paper</a> and our task was to convert it to another language to make it faster as well as modernising the GUI. To develop the GUI we used Qt in C++ (which also allowed us to create an installer) and for the segmentation we used OpenCV as well as a pre-provided library. To load the medical image formats (NIfTI and DICOM) and to save the images as NIfTI, we used VTK.
                     <br><br>
                     <b>Result</b>
                     <br>
-                    This project does all of the matrix calculations I needed and I haven't had a problem with it returning incorrect results. The main difficulty was in Gaussian elimintation and LU factorisation as I had never covered them in maths previously however I got it working and am very pleased about it. These functions may not be as efficient as they could be, however, I wanted to code it similarly to the process that you would take when solving the matrices on paper so that I could easily translate the issues overcome when coding it into knowledge applicable for the exam, on which I got 82%.
+                    For this project, I received <p class="text-danger">TBC%</p>. <a href="https://youtu.be/STxGjxNRmA8" target="_blank">This 2D demo</a> and <a href="https://youtu.be/VtxBrwWJ4DM" target="_blank">this 3D demo</a> show the program working for both 2D and 3D segmentations.
                 </p>
             </div>
 
             <div class="d-flex justify-content-between align-items-center">
-                <div id="matrix">
+                <div id="MIST">
                     <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
                     <!-- See more button -->
-                    <div class="collapse show" id="matrixSeeMore">
+                    <div class="collapse show" id="MISTSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#matrixSeeMore" data-parent="#matrix" value="See More"></input>
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"></input>
                     </div>
                     <!-- Hide button -->
-                    <div class="collapse" id="matrixSeeMore">
+                    <div class="collapse" id="MISTSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#matrixSeeMore" data-parent="#matrix" value="Hide"></input>
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"></input>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2022</small>
+                <small class="text-body-secondary fst-italic">2022 - 2023</small>
             </div>
         </div>
     </div>
-</div><div class="col" id="blockRacingLeague">
+</div><div class="col" id="website">
     <div class="card shadow-sm">
-        <img src="projectImages/blockRacingLeague.png">
-        <div class="card-title px-3 pt-3">Block Racing League</div>
+        <img src="images/portfolio/ericlindesay.png">
+        <div class="card-title px-3 pt-3">ericlindesay.com</div>
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
         <div class="card-body">
             <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/RacingGame" target="_blank">Repository Link</a><br><br>This is a 2D racing game, playable by 2 players, one using WASD and the other using the arrow keys. This was developed in Processing and was my first introduction to the language.
+                <p class="text-danger">If the CV page changes, make sure to update this image</p><a href="https://github.com/EricLindesay/website" target="_blank">Repository Link</a><br><br>This is the website that you are currently looking at! It is written in HTML using Bootstrap.
             </p>
-            <div class="collapse pt-lg-2" id="blockRacingLeagueSeeMore">
+            <div class="collapse pt-lg-2" id="websiteSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
                     <br>
-                    I wanted to make a game and to use Processing as I had never used the language before and wanted to expand my horizons.
+                    In my opinion, it is quite professional when you have a website of your own, so I wanted to make one. It also has allowed me to learn and become comfortable with Bootstrap which will be useful for web development in the future.
                     <br><br>
                     <b>Description</b>
                     <br>
-                    This game has 10 unique levels and is playable by two players who can customise their colours. Certain areas of levels have special effects, including tunnels, sand, ice and teleporters. Both players have to race around the track, collecting the checkpoints and then returning to the start. There also exist some shortcuts in some maps, indicated by a subtle colour change. For the collision, I used a separate black and white collision map which is hidden by the colour version of the map.
+                    This website uses Bootstrap 5 and consists of two pages, the CV page and the Portfolio page. Additionally, while developing this site, I created a quick Python program to automatically format the Portfolio page. I can give it a templated text file with the project's information and it automatically generates the cards which you can see here.
                     <br><br>
                     <b>Result</b>
                     <br>
-                    The game has been compiled into an executable and is published on <a href="https://flyingapple1234.itch.io/block-racing-league">itch.io</a> and has been downloaded 85 times (at the time of writing this).
+                    Well you can see the result of this project for yourself.
                 </p>
             </div>
 
             <div class="d-flex justify-content-between align-items-center">
-                <div id="blockRacingLeague">
+                <div id="website">
                     <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
                     <!-- See more button -->
-                    <div class="collapse show" id="blockRacingLeagueSeeMore">
+                    <div class="collapse show" id="websiteSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="See More"></input>
+                            data-target="#websiteSeeMore" data-parent="#website" value="See More"></input>
                     </div>
                     <!-- Hide button -->
-                    <div class="collapse" id="blockRacingLeagueSeeMore">
+                    <div class="collapse" id="websiteSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="Hide"></input>
+                            data-target="#websiteSeeMore" data-parent="#website" value="Hide"></input>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2019</small>
+                <small class="text-body-secondary fst-italic">2023</small>
             </div>
         </div>
     </div>
 </div><div class="col" id="aimCW">
     <div class="card shadow-sm">
-        <img src="projectImages/aimCoursework.png">
+        <img src="images/portfolio/aimCoursework.png">
         <div class="card-title px-3 pt-3">MIN-SET-COVER problem AI</div>
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
         <div class="card-body">
@@ -166,7 +169,7 @@
     </div>
 </div><div class="col" id="dreamKeeper">
     <div class="card shadow-sm">
-        <img src="projectImages/dreamKeeper.png">
+        <img src="images/portfolio/dreamKeeper.png">
         <div class="card-title px-3 pt-3">Dream Keeper</div>
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
         <div class="card-body">
@@ -208,97 +211,9 @@
             </div>
         </div>
     </div>
-</div><div class="col" id="website">
-    <div class="card shadow-sm">
-        <img src="projectImages/ericlindesay.png">
-        <div class="card-title px-3 pt-3">ericlindesay.com</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <p class="text-danger">If the CV page changes, make sure to update this image</p><a href="https://github.com/EricLindesay/website" target="_blank">Repository Link</a><br><br>This is the website that you are currently looking at! It is written in HTML using Bootstrap.
-            </p>
-            <div class="collapse pt-lg-2" id="websiteSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    In my opinion, it is quite professional when you have a website of your own, so I wanted to make one. It also has allowed me to learn and become comfortable with Bootstrap which will be useful for web development in the future.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This website uses Bootstrap and consists of two pages, the CV page and the Portfolio page. Additionally, while developing this site, I created a quick Python program to automatically format the Portfolio page. I can give it a templated text file with the project's information and it automatically generates the cards which you can see here.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    Well you can see the result of this project for yourself.
-                </p>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="website">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="websiteSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#websiteSeeMore" data-parent="#website" value="See More"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="websiteSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#websiteSeeMore" data-parent="#website" value="Hide"></input>
-                    </div>
-                </div>
-                <small class="text-body-secondary fst-italic">2023</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="MIST">
-    <div class="card shadow-sm">
-        <img src="projectImages/mist.png">
-        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <p class="text-danger">Update this with mark when I receive it</p><br>This was a group project under the supervision of the University in my second year. For this project, I was the Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
-            </p>
-            <div class="collapse pt-lg-2" id="MISTSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    The university assigned us this project for my second year group project which took the entire year. This was developed for Dr. Xin Chen who was our supervisor. This software is useful for clinicians when they want to segment an image, for example quickly separate a certain group of cells or an organ from the rest of the image. The output from this program could also be used to train an AI model which would allow for automatic segmentation.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This project built on a previous program developed by the supervisor available within <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169260721006088" target="_blank">this paper</a> and our task was to convert it to another language to make it faster as well as modernising the GUI. To develop the GUI we used Qt in C++ (which also allowed us to create an installer) and for the segmentation we used OpenCV as well as a pre-provided library. To load the medical image formats (NIfTI and DICOM) and to save the images as NIfTI, we used VTK.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    For this project, I received <p class="text-danger">TBC%</p>. <a href="https://youtu.be/STxGjxNRmA8" target="_blank">This 2D demo</a> and <a href="https://youtu.be/VtxBrwWJ4DM" target="_blank">this 3D demo</a> show the program working for both 2D and 3D segmentations.
-                </p>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="MIST">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="MISTSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="MISTSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"></input>
-                    </div>
-                </div>
-                <small class="text-body-secondary fst-italic">2022 - 2023</small>
-            </div>
-        </div>
-    </div>
 </div><div class="col" id="CompetitiveCoding">
     <div class="card shadow-sm">
-        <img src="projectImages/codeforces.png">
+        <img src="images/portfolio/codeforces.png">
         <div class="card-title px-3 pt-3">Competitive Coding Problems</div>
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
         <div class="card-body">
@@ -342,7 +257,7 @@
     </div>
 </div><div class="col" id="cfutils">
     <div class="card shadow-sm">
-        <img src="projectImages/cfutils.png">
+        <img src="images/portfolio/cfutils.png">
         <div class="card-title px-3 pt-3">cfutils</div>
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
         <div class="card-body">
@@ -384,10 +299,115 @@
             </div>
         </div>
     </div>
+</div><div class="col" id="matrix">
+    <div class="card shadow-sm">
+        <img src="images/portfolio/matrix.png">
+        <div class="card-title px-3 pt-3">Matrix Calculator</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/matrixCalculator" target="_blank">Repository Link</a><br><br>This is a Python command line tool for matrix maths using argparse and multipledispatch. It was created as a supplement to my learning in the Mathematics for Computer Scientists 2 (MCS2) module.
+            </p>
+            <div class="collapse pt-lg-2" id="matrixSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    In MCS2, we covered matrix maths and manipulation. To help me understand and remember the operations, I created this python program. Additionally, it allowed me to easily create questions for myself and then compare the result to the program's output to see whether I got the question correct or not.<br><br>Another reason I wanted to do this project is (before starting this project) I recently learnt operator overloading in Python so I used this project as an excuse to use and gain familiarity with the functions.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This command line tool allows for 16 commands, based on content that we covered in MCS2. It consists of two main files, matrix.py and matrixLib.py. Matrix.py calls matrixLib.py and is just used for command line arguments and the interpretation of those arguments while matrixLib.py does all of the computation. It also has unit tests using the unittest package which is the first time I used that package and was very useful for confirming the functions were correct.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    This project does all of the matrix calculations I needed and I haven't had a problem with it returning incorrect results. The main difficulty was in Gaussian elimintation and LU factorisation as I had never covered them in maths previously however I got it working and am very pleased about it. These functions may not be as efficient as they could be, however, I wanted to code it similarly to the process that you would take when solving the matrices on paper so that I could easily translate the issues overcome when coding it into knowledge applicable for the exam, on which I got 82%.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="matrix">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="matrixSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#matrixSeeMore" data-parent="#matrix" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="matrixSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#matrixSeeMore" data-parent="#matrix" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="blockRacingLeague">
+    <div class="card shadow-sm">
+        <img src="images/portfolio/blockRacingLeague.png">
+        <div class="card-title px-3 pt-3">Block Racing League</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/RacingGame" target="_blank">Repository Link</a><br><br>This is a 2D racing game, playable by 2 players, one using WASD and the other using the arrow keys. This was developed in Processing and was my first introduction to the language.
+            </p>
+            <div class="collapse pt-lg-2" id="blockRacingLeagueSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    I wanted to make a game and to use Processing as I had never used the language before and wanted to expand my horizons.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This game has 10 unique levels and is playable by two players who can customise their colours. Certain areas of levels have special effects, including tunnels, sand, ice and teleporters. Both players have to race around the track, collecting the checkpoints and then returning to the start. There also exist some shortcuts in some maps, indicated by a subtle colour change. For the collision, I used a separate black and white collision map which is hidden by the colour version of the map.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    The game has been compiled into an executable and is published on <a href="https://flyingapple1234.itch.io/block-racing-league">itch.io</a> and has been downloaded 85 times (at the time of writing this).
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="blockRacingLeague">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="blockRacingLeagueSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="blockRacingLeagueSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2019</small>
+            </div>
+        </div>
+    </div>
 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Sticky navbar -->
+    <nav class="navbar justify-content-center navbar-expand-lg navbar-light sticky-bottom bg-body-tertiary">
+        <a href="https://www.github.com/EricLindesay" target="_blank">
+            <img class="img-thumbnail img-fluid" width="40" height="40" src="images/CV/github.png" alt="github">
+        </a>
+        <a href="mailto::eric@lindesay.com" target="_blank">
+            <img class="img-thumbnail img-fluid" width="40" height="40" src="images/CV/email.png" alt="email">
+        </a>
+        <a href="https://www.linkedin.com/in/eric-lindesay-069b40253/" target="_blank">
+            <img class="img-thumbnail img-fluid" width="40" height="40" src="images/CV/linkedin.png" alt="linkedin">
+        </a>
+        <a class="ps-2" href="index.html">CV</a>
+    </nav>
+
+
 </body>
 
 </html>

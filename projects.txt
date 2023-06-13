@@ -1,4 +1,4 @@
-Projects
+Projects not on thing
 
 Coursework
 Tank game in C++
@@ -7,9 +7,6 @@ Snake in Java
 Dijkstra's server-client in C
 Minesweeper in ARM assembly
 Word counter in HDL
-
-Personal project
-matrix command line tool in Python
 
 
 What is it?
