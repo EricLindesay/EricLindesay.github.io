@@ -25,8 +25,8 @@ def formatTextFile(format: str, filename: str) -> str:
 
 
 if __name__ == "__main__":
-    formatFileText = "portfolioFormat.html"
-    formatFileEntire = "entireFormat.html"
+    formatProject = "formattingHTML/portfolioProject.html"
+    formatPage = "formattingHTML/portfolioPage.html"
 
     textFiles: list[str] = readTextFileNames("portfolioText/projectOrder.txt")
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     # read the format file
     formatStr = ""
-    with open(formatFileText, "r") as f:
+    with open(formatProject, "r") as f:
         formatStr = f.read()
 
     # read and format the text files
@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
     # read the format file for the entire html file
     formatEntireStr = ""
-    with open(formatFileEntire, "r") as f:
+    with open(formatPage, "r") as f:
         formatEntireStr = f.read()
 
     # put the text in the right place
