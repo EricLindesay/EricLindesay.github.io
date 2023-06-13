@@ -32,14 +32,102 @@
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3">
-                <div class="col" id="aimCW">
+                <div class="col" id="matrix">
+    <div class="card shadow-sm">
+        <img src="projectImages/matrix.png">
+        <div class="card-title px-3 pt-3">Matrix Calculator</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/matrixCalculator" target="_blank">Repository Link</a><br><br>This is a Python command line tool for matrix maths using argparse and multipledispatch. It was created as a supplement to my learning in the Mathematics for Computer Scientists 2 (MCS2) module.
+            </p>
+            <div class="collapse pt-lg-2" id="matrixSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    In MCS2, we covered matrix maths and manipulation. To help me understand and remember the operations, I created this python program. Additionally, it allowed me to easily create questions for myself and then compare the result to the program's output to see whether I got the question correct or not.<br><br>Another reason I wanted to do this project is (before starting this project) I recently learnt operator overloading in Python so I used this project as an excuse to use and gain familiarity with the functions.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This command line tool allows for 16 commands, based on content that we covered in MCS2. It consists of two main files, matrix.py and matrixLib.py. Matrix.py calls matrixLib.py and is just used for command line arguments and the interpretation of those arguments while matrixLib.py does all of the computation. It also has unit tests using the unittest package which is the first time I used that package and was very useful for confirming the functions were correct.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    This project does all of the matrix calculations I needed and I haven't had a problem with it returning incorrect results. The main difficulty was in Gaussian elimintation and LU factorisation as I had never covered them in maths previously however I got it working and am very pleased about it. These functions may not be as efficient as they could be, however, I wanted to code it similarly to the process that you would take when solving the matrices on paper so that I could easily translate the issues overcome when coding it into knowledge applicable for the exam, on which I got 82%.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="matrix">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="matrixSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#matrixSeeMore" data-parent="#matrix" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="matrixSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#matrixSeeMore" data-parent="#matrix" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2022</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="blockRacingLeague">
+    <div class="card shadow-sm">
+        <img src="projectImages/blockRacingLeague.png">
+        <div class="card-title px-3 pt-3">Block Racing League</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                <a href="https://github.com/EricLindesay/RacingGame" target="_blank">Repository Link</a><br><br>This is a 2D racing game, playable by 2 players, one using WASD and the other using the arrow keys. This was developed in Processing and was my first introduction to the language.
+            </p>
+            <div class="collapse pt-lg-2" id="blockRacingLeagueSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    I wanted to make a game and to use Processing as I had never used the language before and wanted to expand my horizons.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This game has 10 unique levels and is playable by two players who can customise their colours. Certain areas of levels have special effects, including tunnels, sand, ice and teleporters. Both players have to race around the track, collecting the checkpoints and then returning to the start. There also exist some shortcuts in some maps, indicated by a subtle colour change. For the collision, I used a separate black and white collision map which is hidden by the colour version of the map.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    The game has been compiled into an executable and is published on <a href="https://flyingapple1234.itch.io/block-racing-league">itch.io</a> and has been downloaded 85 times (at the time of writing this).
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="blockRacingLeague">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="blockRacingLeagueSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="See More"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="blockRacingLeagueSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="Hide"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2019</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="aimCW">
     <div class="card shadow-sm">
         <img src="projectImages/aimCoursework.png">
         <div class="card-title px-3 pt-3">MIN-SET-COVER problem AI</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Univeristy of Nottingham</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
         <div class="card-body">
             <p class="border-top pt-3">
-                This was a piece of coursework as part of second year at the University. We had to develop an AI to solve the MIN-SET-COVER problem. In this problem, you get given a set of resources and you have to use the minimal number of resources to satisfy your needs which, as you can imagine, is a common problem. An example use is "if you have N programmers who each know a set of programming languages, what are the minimum number of programmers required to cover every programming language?".<br><br>This problem is a NP-hard combinatorial optimisation problem (COP). This means you cannot solve this problem in polynomial time (it must be exponential time for example) so we need to use AI to solve it within a reasonable time frame, especially as the number of resources get high.
+                This was a piece of coursework as part of second year at the University. We had to develop an AI in Java to solve the MIN-SET-COVER problem. In this problem, you get given a set of resources and you have to use the minimal number of resources to satisfy your needs which, as you can imagine, is a common problem. An example use is "if you are given N programmers who each know a set of programming languages, what are the minimum number of programmers required to cover every programming language?".<br><br>This problem is a NP-hard combinatorial optimisation problem (COP). This means you cannot solve this problem in polynomial time (it must be exponential time for example) so we need to use AI to solve it within a reasonable time frame, especially as the number of resources get high.
             </p>
             <div class="collapse pt-lg-2" id="aimCWSeeMore">
                 <p class="border-top">
@@ -98,7 +186,7 @@
                     <br><br>
                     <b>Result</b>
                     <br>
-                    I use the app every time I have a dream and (in my opinion) it is very simple to use. The app isn't currently uploaded to the app store however I may consider uploading it in the future. If I were to upload it to the app store, I would probably add more features to the app such as allowing custom ordering for dreams (right now it sorted by date) and a way to allow the user to export and import dreams. I have not added these features yet as the app is just for my own use and I know I would not use those features.
+                    I use the app every time I have a dream and it is very simple to use. The app isn't currently uploaded to the app store however I may consider uploading it in the future. If I were to upload it to the app store, I would probably add more features to the app such as allowing custom ordering for dreams (right now it sorted by date) and a way to allow the user to export and import dreams. I have not added these features yet as the app is just for my own use and I know I would not use those features.
                 </p>
             </div>
 
@@ -226,7 +314,7 @@
                     <br><br>
                     <b>Description</b>
                     <br>
-                    These problems all very massively, some of them are mathematical, others use dynamic programming and others use graph theory. Codeforces ranks questions based on a difficulty which increments by 100. My attempts are sorted in the directories based on this difficulty and have a README which describes the problem and my thought process towards the solution. Most of these problems are solved in C++ however some of them use other languages such as Python.
+                    These problems all vary massively, some of them are mathematical, others use dynamic programming and others use graph theory. Codeforces ranks the questions based on a difficulty with increments of 100. My attempts are sorted in the directories based on this difficulty and have a README which describes the problem and my thought process towards the solution. Most of these problems are solved in C++ however some of them use other languages such as Python.
                     <br><br>
                     <b>Result</b>
                     <br>

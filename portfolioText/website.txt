@@ -1,0 +1,9 @@
+nickname | website
+image | ericlindesay.png
+title | ericlindesay.com
+subtitle | Individual Project
+main | <p class="text-danger">If the CV page changes, make sure to update this image</p><a href="https://github.com/EricLindesay/website" target="_blank">Repository Link</a><br><br>This is the website that you are currently looking at! It is written in HTML using Bootstrap.
+motivation | In my opinion, it is quite professional when you have a website of your own, so I wanted to make one. It also has allowed me to learn and become comfortable with Bootstrap which will be useful for web development in the future.
+description | This website uses Bootstrap and consists of two pages, the CV page and the Portfolio page. Additionally, while developing this site, I created a quick Python program to automatically format the Portfolio page. I can give it a templated text file with the project's information and it automatically generates the cards which you can see here. 
+result | Well you can see the result of this project for yourself.
+date | 2023
