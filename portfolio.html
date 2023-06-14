@@ -16,6 +16,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <!-- Import Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+
     <style>
         div {
             /* border: 2px dotted red; */
@@ -25,16 +30,19 @@
 </head>
 
 <body class="bg-body-secondary">
-    <div class="row justify-content-center row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3 mt-3">
-        <div class="container rounded">
-            <p class="col text-center py-5 fs-1 fw-bolder bg-white">
-                Portfolio
-            </p>
-        </div>
-    </div>
+    <!-- <div class="row justify-content-center row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3 mt-3"> -->
+    <!-- <div class="container rounded"> -->
+    <p class="col text-center py-5 fs-1 fw-bolder">
+        Portfolio
+    </p>
+    <!-- </div> -->
+    <!-- </div> -->
     <div class="album">
         <div class="container">
-            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 row-cols-md-2 g-3">
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1
+                row-cols-md-2 g-3" id="masonryDiv">
+                <!-- <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 -->
+                <!-- row-cols-md-2 g-3"> -->
                 <div class="col" id="MIST">
     <div class="card shadow-sm">
         <img src="images/portfolio/mist.png">
@@ -42,9 +50,9 @@
         <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
         <div class="card-body">
             <p class="border-top pt-3">
-                <p class="text-danger">Update this with mark when I receive it</p><br>This was a group project under the supervision of the University in my second year. For this project, I was nominated as Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
+                This was a group project under the supervision of the University in my second year. For this project, I was nominated as Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
             </p>
-            <div class="collapse pt-lg-2" id="MISTSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="MISTSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -67,12 +75,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="MISTSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"></input>
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="MISTSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"></input>
+                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2022 - 2023</small>
@@ -88,7 +98,7 @@
             <p class="border-top pt-3">
                 <a href="https://github.com/EricLindesay/website" target="_blank">Repository Link</a><br><br>This is the website that you are currently looking at! It is written in HTML using Bootstrap.
             </p>
-            <div class="collapse pt-lg-2" id="websiteSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="websiteSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -111,12 +121,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="websiteSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#websiteSeeMore" data-parent="#website" value="See More"></input>
+                            data-target="#websiteSeeMore" data-parent="#website" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="websiteSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#websiteSeeMore" data-parent="#website" value="Hide"></input>
+                            data-target="#websiteSeeMore" data-parent="#website" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2023</small>
@@ -132,7 +144,7 @@
             <p class="border-top pt-3">
                 This was a piece of coursework as part of second year at the University. We had to develop an AI in Java to solve the MIN-SET-COVER problem. In this problem, you get given a set of resources and you have to use the minimal number of resources to satisfy your needs which, as you can imagine, is a common problem. An example use is "if you are given N programmers who each know a set of programming languages, what are the minimum number of programmers required to cover every programming language?".<br><br>This problem is a NP-hard combinatorial optimisation problem (COP). This means you cannot solve this problem in polynomial time (it must be exponential time for example) so we need to use AI to solve it within a reasonable time frame, especially as the number of resources get high.
             </p>
-            <div class="collapse pt-lg-2" id="aimCWSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="aimCWSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -155,12 +167,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="aimCWSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="See More"></input>
+                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="aimCWSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="Hide"></input>
+                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2023</small>
@@ -176,7 +190,7 @@
             <p class="border-top pt-3">
                 <a href="https://github.com/EricLindesay/dreamKeeper" target="_blank">Repository Link</a><br><br>This is an Android app I developed for myself which I use to record my dreams, storing them in a local Room database. This was developed in Android Studio and was my first attempt at an Android app which I think went pretty well.
             </p>
-            <div class="collapse pt-lg-2" id="dreamKeeperSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="dreamKeeperSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -199,15 +213,63 @@
                     <!-- See more button -->
                     <div class="collapse show" id="dreamKeeperSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="See More"></input>
+                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="dreamKeeperSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="Hide"></input>
+                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2022</small>
+            </div>
+        </div>
+    </div>
+</div><div class="col" id="tankGame">
+    <div class="card shadow-sm">
+        <img src="images/portfolio/tankGame.png">
+        <div class="card-title px-3 pt-3">Our Tanks</div>
+        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
+        <div class="card-body">
+            <p class="border-top pt-3">
+                This was a coursework with the University. We got given a wrapper library around SDL (a C graphical library) and got given free rein over what we did with it. Our only restrictions were that it had to be in C++ and we had some criteria to meet. The program I ended up creating is a game similar to Wii Tanks, a game which I greatly enjoyed during my childhood.
+            </p>
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="tankGameSeeMore">
+                <p class="border-top">
+                    <br>
+                    <b>Motivation</b>
+                    <br>
+                    C++ is a language I enjoy using so I was looking forward to this coursework. It also allowed me to practice writing code efficiently, for example for my collision bitmaps and for the enemy AI.
+                    <br><br>
+                    <b>Description</b>
+                    <br>
+                    This game consists of 3 levels and can easily be expanded as each level is stored using JSON. The player can move forward and backwards, rotate and shoot bullets which rebound on walls and the enemy can do the same. It was quite difficult to program the enemy shooting. Since the bullets can bounce, to check valid shots which the enemy can do becomes very computationally expensive. It was very fun for me to optimise this so that the enemy is intelligent without lagging the game, leading me to do some interesting vector maths.
+                    <br><br>
+                    <b>Result</b>
+                    <br>
+                    This coursework didn't meet all of my personal expectations by the time it was due. During this summer, I plan to add more features to the game, improving the enemy AI further and diversifying the types of enemies. Additionally I plan to use libraries to help with development such as a proper JSON parser since, during the coursework, we weren't allowed to use any libraries except the wrapper provided meaning I had to make the current JSON parser myself.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="tankGame">
+                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
+                    <!-- See more button -->
+                    <div class="collapse show" id="tankGameSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#tankGameSeeMore" data-parent="#tankGame" value="See More"
+                            onclick="immediateReload()"></input>
+                    </div>
+                    <!-- Hide button -->
+                    <div class="collapse" id="tankGameSeeMore">
+                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+                            data-target="#tankGameSeeMore" data-parent="#tankGame" value="Hide"
+                            onclick="delayedReload()"></input>
+                    </div>
+                </div>
+                <small class="text-body-secondary fst-italic">2023</small>
             </div>
         </div>
     </div>
@@ -220,7 +282,7 @@
             <p class="border-top pt-3">
                 <a href="https://github.com/EricLindesay/codeforces" target="_blank">Repository Link</a><br><br>I enjoy doing competitive coding problems. They are difficult but very enjoyable, especially when you complete the problem. The main website I use for this is <a href="https://www.codeforces.com" target="_blank">codeforces</a> however I sometimes do challenges from other websites such as <a href="https://leetcode.com/" target="_blank">leetcode</a>, <a href="https://www.codewars.com/" target="_blank">codewars</a> and <a href="https://www.hackerrank.com/" target="_blank">hackerrank</a>.
             </p>
-            <div class="collapse pt-lg-2" id="CompetitiveCodingSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="CompetitiveCodingSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -243,12 +305,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="CompetitiveCodingSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="See More"></input>
+                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="CompetitiveCodingSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="Hide"></input>
+                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2022 - Present</small>
@@ -264,7 +328,7 @@
             <p class="border-top pt-3">
                 <a href="https://github.com/EricLindesay/cfutils" target="_blank">Repository Link</a><br><br>This is a command line utility Python program that I made to accompany my codeforces challenges (<b>c</b>ode<b>f</b>orces <b>utils</b>). This tool can automatically create the READMEs for the codeforces challenges if given the url. It can also list all the challenges I have attempted, with some useful filters. E.g. filtering by difficulty and only show incomplete problems.
             </p>
-            <div class="collapse pt-lg-2" id="cfutilsSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="cfutilsSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -287,12 +351,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="cfutilsSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="See More"></input>
+                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="cfutilsSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="Hide"></input>
+                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2022</small>
@@ -308,7 +374,7 @@
             <p class="border-top pt-3">
                 <a href="https://github.com/EricLindesay/matrixCalculator" target="_blank">Repository Link</a><br><br>This is a Python command line tool for matrix maths using argparse and multipledispatch. It was created as a supplement to my learning in the Mathematics for Computer Scientists 2 (MCS2) module.
             </p>
-            <div class="collapse pt-lg-2" id="matrixSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="matrixSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -331,12 +397,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="matrixSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#matrixSeeMore" data-parent="#matrix" value="See More"></input>
+                            data-target="#matrixSeeMore" data-parent="#matrix" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="matrixSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#matrixSeeMore" data-parent="#matrix" value="Hide"></input>
+                            data-target="#matrixSeeMore" data-parent="#matrix" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2022</small>
@@ -352,7 +420,7 @@
             <p class="border-top pt-3">
                 <a href="https://github.com/EricLindesay/RacingGame" target="_blank">Repository Link</a><br><br>This is a 2D racing game, playable by 2 players, one using WASD and the other using the arrow keys. This was developed in Processing and was my first introduction to the language.
             </p>
-            <div class="collapse pt-lg-2" id="blockRacingLeagueSeeMore">
+            <div class="collapse pt-lg-2 seeMoreCollapse" id="blockRacingLeagueSeeMore">
                 <p class="border-top">
                     <br>
                     <b>Motivation</b>
@@ -375,12 +443,14 @@
                     <!-- See more button -->
                     <div class="collapse show" id="blockRacingLeagueSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="See More"></input>
+                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="See More"
+                            onclick="immediateReload()"></input>
                     </div>
                     <!-- Hide button -->
                     <div class="collapse" id="blockRacingLeagueSeeMore">
                         <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="Hide"></input>
+                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="Hide"
+                            onclick="delayedReload()"></input>
                     </div>
                 </div>
                 <small class="text-body-secondary fst-italic">2019</small>
@@ -408,6 +478,7 @@
     </nav>
 
 
+    <script src="app.js"></script>
 </body>
 
 </html>
