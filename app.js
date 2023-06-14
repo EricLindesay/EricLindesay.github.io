@@ -1,6 +1,11 @@
 
 const grid = document.getElementById("masonryDiv");
-var msnry = new Masonry(grid);
+var msnry;
+
+var $grid = $('#masonryDiv').imagesLoaded(function () {
+    // init Masonry after all images have loaded
+    msnry = new Masonry(grid);
+});
 
 function immediateReload() {
     reloadMasonry();
@@ -25,22 +30,4 @@ function doReload(thing) {
         msnry.layout();
     });
 }
-
-
-// Reload the masonry after every image has loaded
-// Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
-//     document.addEventListener('DOMContentLoaded', function () {
-//         msnry.layout();
-//     });
-// });
-
-$(document).ready(function () {
-    grid.imagesLoaded(function () {
-        msnry.layout();
-    });
-});
-
-// document.addEventListener('load'), (event) => {
-//     msnry.layout();
-// };
 
