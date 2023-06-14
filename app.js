@@ -7,7 +7,6 @@ reloadMasonry();
 
 function immediateReload() {
     reloadMasonry();
-    // msnry.layout();
 }
 
 function delayedReload() {
@@ -15,7 +14,6 @@ function delayedReload() {
 }
 
 function reloadMasonry() {
-    console.log("RELOAD");
     const collapseThings = document.getElementsByClassName("seeMoreCollapse");
     for (i = 0; i < collapseThings.length; i++) {
         doReload(collapseThings[i]);
