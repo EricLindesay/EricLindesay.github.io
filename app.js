@@ -34,13 +34,13 @@ function doReload(thing) {
 //     });
 // });
 
-// $(document).ready(function () {
-//     grid.imagesLoaded(function () {
-//         msnry.layout();
-//     });
-// });
+$(document).ready(function () {
+    grid.imagesLoaded(function () {
+        msnry.layout();
+    });
+});
 
-document.addEventListener('load'), (event) => {
-    msnry.layout();
-};
+// document.addEventListener('load'), (event) => {
+//     msnry.layout();
+// };
 
