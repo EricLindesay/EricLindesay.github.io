@@ -1,12 +1,9 @@
 
-console.log("Test");
-
-// const grid = document.querySelector('.row');
 const grid = document.getElementById("masonryDiv");
 console.log(grid.classList);
 var msnry = new Masonry(grid);
 
-console.log("After msnry");
+reloadMasonry();
 
 function immediateReload() {
     reloadMasonry();
