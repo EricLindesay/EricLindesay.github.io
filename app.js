@@ -30,11 +30,17 @@ function doReload(thing) {
 // Reload the masonry after every image has loaded
 // Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
 //     document.addEventListener('DOMContentLoaded', function () {
-//         reloadMasonry
+//         msnry.layout();
+//     });
+// });
+
+// $(document).ready(function () {
+//     grid.imagesLoaded(function () {
+//         msnry.layout();
 //     });
 // });
 
 document.addEventListener('load'), (event) => {
-    reloadMasonry();
+    msnry.layout();
 };
 
