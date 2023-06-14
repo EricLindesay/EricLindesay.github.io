@@ -3,7 +3,7 @@ const grid = document.getElementById("masonryDiv");
 console.log(grid.classList);
 var msnry = new Masonry(grid);
 
-reloadMasonry();
+document.addEventListener('DOMContentLoaded', function () { reloadMasonry });
 
 function immediateReload() {
     reloadMasonry();
