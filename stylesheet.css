@@ -1,16 +1,4 @@
-.grey_background {
-    background-color: lightgrey;
-}
-
-.white_background {
-    background-color: whitesmoke;
-}
-
-.my-card {
-    width: 18rem;
-    height: 18rem;
-}
-
+/* Change the transition speed */
 .collapsing {
     position: relative;
     height: 0;
