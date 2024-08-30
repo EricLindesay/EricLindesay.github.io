@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eric Lindesay Portfolio</title>
     <link rel="icon" href="images/CV/profile_pic.png">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
+
+    <!-- Popper -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <!-- Import the imagesloaded plugin -->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <!-- Import Masonry -->
@@ -39,469 +43,651 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1
                 row-cols-md-2 g-3" id="masonryDiv" data-masonry='{"percentPosition": true }'>
-                <!-- <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1 -->
-                <!-- row-cols-md-2 g-3"> -->
+
+
+                <!-- DDR -->
+                <div class="col" id="ddr">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/ddr.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Differential Drive Robot AI
+                                <small>
+                                    <a href="https://github.com/EricLindesay/designing-intelligent-agents-report/blob/main/report.pdf" target="_blank">
+                                        Report
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Univeristy of Nottingham
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    Developed a Python program to evaluate and compare four different AI agents 
+                                    controlling a 2-wheeled differential drive robot across three environments.
+                                    The comparison metrics include actions taken, timesteps, distance travelled, 
+                                    and progress achieved.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="ddrSeeMore">
+                                    <ul>
+                                        <li>
+                                            Developed an agent which takes actions randomly, a reactive agent which 
+                                            has no knowledge of the past of future and only reacts to what it currently
+                                            sees, an agent which uses A* pathfinder to find the optimal route and an
+                                            agent which uses Q-learning to attempt to solve the problem.
+                                        </li>
+                                        <li>
+                                            Each agent controls a 2-wheel differential drive, allowing them to 
+                                            independently change the speed of each wheel. 
+                                        </li>
+                                        <li>
+                                            Used inheritance for each agent type to reduce code reuse and type hinting
+                                            for easier debugging.
+                                        </li>
+                                        <li>
+                                            Used the Separating Axis Theorem for collision checking. 
+                                        </li>
+                                        <li>
+                                            Designed and implemented a testing process to compare the models.
+                                        </li>
+                                        <li>
+                                            Produced a 3000 word report outlining my methods and results using 
+                                            <a href="https://typst.app/">Typst</a> for clear and professional 
+                                            algorithms and tables.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="ddr">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="ddrButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#ddrSeeMore" aria-expanded="false"
+                                        aria-controls="ddrSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Hacknotts project -->
                 <div class="col" id="hacknotts">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/hacknotts.png">
-        <div class="card-title px-3 pt-3">Verilog HDL to Minecraft Redstone</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project - Hackathon Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/HackNotts" target="_blank">Repository Link</a><br><a href="https://devpost.com/software/hdl-to-minecraft" target="_blank">Devpost about the project</a><br><br>This is a project that I did with two of my friends during <a href="https://www.hacknotts.com/" target="_blank">HackNotts</a> '84.<br><br>For this hackathon, we created a program which can convert Verilog HDL files into Minecraft using redstone while implementing both combinatorial and sequential logic. This project won us the prize for the "Hackiest Hack" due to how ambitious our project was and due to the fact that our program relies on randomly shuffling the initial placement of the logic gates meaning that our program technically has a worst case runtime complexity of O(Forever).
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="hacknottsSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    Hackathons are events in which you have a limited period of time (normally 24 hours) to hack together a project.<br><br>Our project was inspired by <a href="https://github.com/itsFrank/MinecraftHDL" target="_blank">MinecraftHDL</a>. This is a project developed by three canadian unviersity students which takes a Verilog file and converts it into Minecraft redstone, however this project is limited: it can only convert combinatorial logic circuits. We had the very ambitious plan to create a program which can convert both combintatorial and sequential circuits and we managed to succeed in the 24 hour period.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This project is composed of three main difficulties, converting the Verilog file into something useful to us, placing and routing the logic gates and placing the blocks into Minecraft.<br><br>Parsing the Verilog file was done using <a href="https://github.com/YosysHQ/yosys" target="_blank">Yosys</a>. This allows us to convert the Verilog into a JSON format, including the netlist. We then parse this file, taking notes of the number of inputs, output and logic gates, as well as the unique wire IDs for each connection.<br><br>For the placing and routing, we have a 3-D array (which helps make conversion into Minecraft easier). The array is split into three layers. The top layer is where the logic gates themselves are placed as well as the inputs and outputs. The second and third layers are both routing layers. The second layer is initially populated with the gate inputs and outputs. We then use Dijkstra's shortest path algorithm in three dimensions to route the wires by using the IDs of the gate that it comes from and gates it goes to. When we mark down the shortest path, we also have to mark any changes in layer, marking them as either a VIA_UP or VIA_DOWN where necessary.<br><br>Something important to know about redstone is that the wires can't cross and wires must have a gap of atleast one block which must be taken into account when running the algorithm. After placing the wires, we then have a verification step which checks the wire routing to make sure that the wires' routing is valid. Additionally, we need to then place repeaters. Minecraft redstone only has a signal strength of 15 blocks so you need to put repeaters every 15 blocks to boost the signal strength. Repeaters also have certain restrictions on how they are placed, they must be placed on a straight section of the wire. This is difficult by itself, but we also have to pay attention to the orientation of the repeaters because the repeaters must follow the direction of the wire.<br><br>We then have to interpret this array and place the blocks in Minecraft. To do this, we use <a href="https://www.curseforge.com/minecraft/mc-mods/worldedit" target="_blank">World Edit</a> (the only Minecraft mod required to use our program) and we load a schematic using it. Placing the gates and wires are fairly straightforward due to our grid implementation being easily transferable to Minecraft. We did find a few restrictions with our method though. We discovered that you can't chain vias, you have to offset them by atleast one block. This was simple to implement but is an important limitation.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    At the end of these 24 hours, we had managed to successfully create a program which can convert sequential logic from Verilog to redstone, achieving our goal. For the showcase at the end of the hackathon, we were able to show off our 3 bit counter, implemented purely using our program which placed over 30,000 blocks. As previously mentioned, we also won the prize for "Hackiest Hack".<br><br>Our program works but there are a lot of limitations to it (kind of expected when only given 24 hours to work on it). Due to our time limitations, we only managed to implement Dijkstra's algorithm and not anything more complex. This means that the program takes a long time to run, especially as you increase the number of logic gates. Additionally, the program isn't bug-free. Sometimes the program produces a result which is invalid, mainly due to not placing enough repeaters. Our program also cannot guarantee a result. When you run the program, you have to set the gap between logic gates, this can cause issues sometimes because the wires may not be able to be placed far enough apart. For the 3 bit counter, our initial parameters didn't allow for a solution to be generated and we had to increase the gap before getting any results.<br><br>You can easily improve our current work by implementing more efficient algorithms and cleaning up redundant code. We know that the program is not perfect but we are extremely proud of our accomplishment and I plan to work on this project more in the future because it was so fun to make.
-                </p>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="hacknotts">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="hacknottsSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#hacknottsSeeMore" data-parent="#hacknotts" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="hacknottsSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#hacknottsSeeMore" data-parent="#hacknotts" value="Hide"
-                            onclick="delayedReload()"></input>
-                    </div>
-                </div>
-                <small class="text-body-secondary fst-italic">2023</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="MIST">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/mist.png">
-        <div class="card-title px-3 pt-3">Medical Image Segmentation Tool (MIST)</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                This was a group project under the supervision of the University in my second year. For this project, I was nominated as Team Leader so I allocated work across the 7 team members and made sure people were doing work to a high quality, as well as writing reports and participating in presentations.<br>I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="MISTSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    The university assigned us this project for my second year group project which took the entire year. This was developed for Dr. Xin Chen who was our supervisor. This software is useful for clinicians when they want to segment an image, for example quickly separate a certain group of cells or an organ from the rest of the image. The output from this program could also be used to train an AI model which would allow for automatic segmentation.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This project built on a previous program developed by the supervisor available within <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169260721006088" target="_blank">this paper</a> and our task was to convert it to another language to make it faster as well as modernising the GUI. To develop the GUI we used Qt in C++ (which also allowed us to create an installer) and for the segmentation we used OpenCV as well as a pre-provided library. To load the medical image formats (NIfTI and DICOM) and to save the images as NIfTI, we used VTK.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=STxGjxNRmA8" target="_blank">This 2D demo</a> and <a href="https://youtu.be/VtxBrwWJ4DM" target="_blank">this 3D demo</a> show the program working for both 2D and 3D segmentations. The supervisor was very happy with the product and the entire team is very proud of what we accomplished and the grade we received as a result (85%).
-                </p>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="MIST">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="MISTSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#MISTSeeMore" data-parent="#MIST" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="MISTSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#MISTSeeMore" data-parent="#MIST" value="Hide"
-                            onclick="delayedReload()"></input>
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/hacknotts.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Verilog HDL to Minecraft Redstone
+                                <small>
+                                    <a href="https://github.com/EricLindesay/HackNotts" target="_blank">
+                                        Repository 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Prize-Winning Hackathon Project
+                                <small class="fst-normal">
+                                    <a href="https://devpost.com/software/hdl-to-minecraft" target="_blank">
+                                        DevPost 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    Python program to convert Verilog to Minecraft Redstone circuits winning the "Hackiest Hack" prize.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="hacknottsSeeMore">
+                                    <ul>
+                                        <li>
+                                            Developed a Python program that translates Verilog hardware description 
+                                            language into functional redstone circuits in Minecraft, inspired by the 
+                                            MinecraftHDL project from McGill University.
+                                        </li>
+                                        <li>
+                                            Extended the original concept to include sequential logic, enabling circuits to 
+                                            hold and manage state, allowing for more complex and dynamic designs.
+                                        </li>
+                                        <li>
+                                            Designed and placed logic gates using redstone dust and repeaters, automatically 
+                                            connecting them into both combinational and sequential circuits.
+                                        </li>
+                                        <li>
+                                            Addressed signal delay and timing challenges by strategically utilizing repeaters to ensure accurate circuit operation.    
+                                        </li>
+                                        <li>
+                                            Integrated digital design principles with a gaming platform, demonstrating the practical application of hardware description languages in a novel, interactive environment.    
+                                        </li>
+                                        <li>
+                                        Collaborated on all aspects of the project, including algorithm design, coding, and testing, to deliver the solution within 24 hours.</li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="hacknotts">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="hacknottsButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#hacknottsSeeMore" aria-expanded="false"
+                                        aria-controls="hacknottsSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2023</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2022 - 2023</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="website">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/ericlindesay.png">
-        <div class="card-title px-3 pt-3">ericlindesay.com</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/website" target="_blank">Repository Link</a><br><br>This is the website that you are currently looking at! It is written in HTML using Bootstrap.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="websiteSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    In my opinion, it is quite professional when you have a website of your own, so I wanted to make one. It also has allowed me to learn and become comfortable with Bootstrap which will be useful for web development in the future.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This website uses Bootstrap 5 and consists of two pages, the CV page and the Portfolio page. Additionally, while developing this site, I created a quick Python program to automatically format the Portfolio page. I can give it a templated text file with the project's information and it automatically generates the cards which you can see here.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    Well you can see the result of this project for yourself.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="website">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="websiteSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#websiteSeeMore" data-parent="#website" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="websiteSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#websiteSeeMore" data-parent="#website" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- MIST -->
+                <div class="col" id="MIST">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/mist.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Medical Image Segmentation Tool (MIST)
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                University of Nottingham
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    A group project for the university which I led. The tool is designed for 
+                                    clinicians who can use it to track tumour growth and easily identify organs in 
+                                    medical images.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="mistSeeMore">
+                                    <p class="fst-italic">
+                                        Image segmentation is the process of automatically separating sections
+                                        of an image, for example, separating bones, organs and tissues into 
+                                        distinct regions.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Managed 7 team members, assigning tasks, ensuring contribution and 
+                                            communicating with the supervisor (so that we met requirements).
+                                        </li>
+                                        <li>
+                                            This project was supervised by Dr. Xin Chen for the entire academic year.
+                                        </li>
+                                        <li>
+                                            Converted and optimized a MATLAB legacy <a href="https://www.sciencedirect.com/science/article/pii/S0169260721006088" target="_blank">medical image segmentation program</a>
+                                            to C++ using the Qt framework, modernizing the GUI and enhancing performance.
+                                        </li>
+                                        <li>
+                                            The program uses VTK to segment 2D and 3D images, supporting medical 
+                                            imaging formats such as NIfTI and DICOM.
+                                        </li>
+                                        <li>
+                                            Implemented image processing algorithms using OpenCV and a provided
+                                            library.
+                                        </li>
+                                        <li>
+                                            I primarily worked on the front-end, assisting with creating the UI and
+                                            creating an installation wizard for the program.
+                                        </li>
+                                        <li>
+                                            The supervisor and team were highly satisfied with the result we got: 85%.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="mist">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="mistButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#mistSeeMore" aria-expanded="false"
+                                        aria-controls="mistSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2022 - 2023</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2023</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="aimCW">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/aimCoursework.png">
-        <div class="card-title px-3 pt-3">MIN-SET-COVER Problem AI</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                This was a piece of coursework as part of second year at the University. We had to develop an AI in Java to solve the MIN-SET-COVER problem. In this problem, you get given a set of resources and you have to use the minimal number of resources to satisfy your needs which, as you can imagine, is a common problem. An example use is "if you are given N programmers who each know a set of programming languages, what are the minimum number of programmers required to cover every programming language?".<br><br>This problem is a NP-hard combinatorial optimisation problem (COP). This means you cannot solve this problem in polynomial time (it must be exponential time for example) so we need to use AI to solve it within a reasonable time frame, especially as the number of resources get high.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="aimCWSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    This was a coursework I was very interested in, AI is fascinating and I was very interested in learning how it works in more detail which was a requirement for the coursework as we had to implement it from scratch.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    For the coursework, we had to develop a learning hyper-heuristic AI with elaborate move acceptance (I used simulated annealing with reheating using a geometric cooling schedule).<br><br>We had to use Java. This allowed us to form an understanding of how AI works "under-the-hood" without the abstraction which libraries can give you since we weren't allowed to use any libraries.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    This coursework was very enjoyable, one of the most enjoyable I've had so far. I really enjoyed implementing all of the heuristics I chose and tuning the parameters (using Taguchi Orthogonal Arrays) to get perfect results from the test cases we were given.<br><br>For this coursework I got a grade of 90% which I am very pleased with.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="aimCW">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="aimCWSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="aimCWSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#aimCWSeeMore" data-parent="#aimCW" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- Website -->
+                <div class="col" id="website">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/ericlindesay.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                ericlindesay.github.io
+                                <small>
+                                    <a href="https://github.com/EricLindesay/EricLindesay.github.io" target="_blank">
+                                        Repository 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Personal Project
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    This is the website you are currently looking at! It is made using Bootstrap 5 and Masonry.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="websiteSeeMore">
+                                    <ul>
+                                        <li>
+                                            Created and designed a website containing my CV and portfolio.
+                                        </li>
+                                        <li>
+                                            Uses Bootstrap 5 for modern aesthetics and Masonry for the tile layout.
+                                        </li>
+                                        <li>
+                                            Taught me website design and reinforced my knowledge about HTML and JavaScript.
+                                        </li>
+                                        <li>
+                                            Continuous iteration and improvement as I update my CV and complete more projects.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="website">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="websiteButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#websiteSeeMore" aria-expanded="false"
+                                        aria-controls="websiteSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2023</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2023</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="dreamKeeper">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/dreamKeeper.png">
-        <div class="card-title px-3 pt-3">Dream Keeper</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/dreamKeeper" target="_blank">Repository Link</a><br><br>This is an Android app I developed for myself which I use to record my dreams, storing them in a local Room database. This was developed in Android Studio and was my first attempt at an Android app which I think went pretty well.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="dreamKeeperSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    I have very vivid dreams and they are interesting so I like to write them down. To do this I was using a note taking app but it didn't have all the functionality I wanted, I wanted better tagging and searching for tags and dates as well as an easy way to add a new dream. So I created this app.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This app allows you to write new dreams and search on dreams you have already written. You can search by date range (e.g. from 01/05/2023 - 31/05/2023, by text in the dream and by tag). Additionally, you can copy the content of a dream after writing it, allowing for easy copy and paste to other locations (I use it to share my dreams with my friends).<br><br>A feature which it was very important for me to include was a home screen widget (shown in the picture at the top). I wanted this widget to make access to the app faster and so that I can look at the dreams through the home screen, without having to open the app fully, and to quickly press the '+' icon to add a new dream through the widget.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    I use the app every time I have a dream and it is very simple to use. The app isn't currently uploaded to the app store however I may consider uploading it in the future. If I were to upload it to the app store, I would probably add more features to the app such as allowing custom ordering for dreams (right now it sorted by date) and a way to allow the user to export and import dreams. I have not added these features yet as the app is just for my own use and I know I would not use those features.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="dreamKeeper">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="dreamKeeperSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="dreamKeeperSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#dreamKeeperSeeMore" data-parent="#dreamKeeper" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- AIM CW -->
+                <div class="col" id="aimCoursework">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/aimCoursework.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                MIN-SET-COVER AI
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                University of Nottingham
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    The MIN-SET-COVER problem is an NP-hard problem where you have to optimally 
+                                    allocate resources so that all elements in a set are covered. This coursework 
+                                    involved creating an AI in Java to solve this problem. 
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="aimCWSeeMore">
+                                    <p class="fst-italic">
+                                        An example of the MIN-SET-COVER problem is, given N programmers who each 
+                                        know a set of programming languages, what are the minimum number of 
+                                        programmers required to cover every programming language?
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Implemented a learning hyper-heuristic AI with simulated annealing and
+                                            reheating using a geometric cooling schedule for move acceptance.
+                                        </li>
+                                        <li>
+                                            Tuned parameters using Taguchi Orthogonal Arrays.
+                                        </li>
+                                        <li>
+                                            As we weren't allowed to use external libraries, I gained a deep understanding
+                                            of AI algorithms and optimisation techniques.
+                                        </li>
+                                        <li>
+                                            This uncovered my interest for optimisation and efficient programming.
+                                        </li>
+                                        <li>
+                                            Achieved a grade of 90% reflecting my understanding and interest in the task.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="aimCoursework">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="aimCWButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#aimCWSeeMore" aria-expanded="false"
+                                        aria-controls="aimCWSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2023</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2022</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="tankGame">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/tankGame.png">
-        <div class="card-title px-3 pt-3">Our Tanks</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">University of Nottingham</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                This was a coursework with the University. We got given a wrapper library around SDL (a C graphical library) and got given free rein over what we did with it. Our only restrictions were that it had to be in C++ and we had some criteria to meet. The program I ended up creating is a game similar to Wii Tanks, a game which I greatly enjoyed during my childhood.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="tankGameSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    C++ is a language I enjoy using so I was looking forward to this coursework. It also allowed me to practice writing code efficiently, for example for my collision bitmaps and for the enemy AI.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This game consists of 3 levels and can easily be expanded as each level is stored using JSON. The player can move forward and backwards, rotate and shoot bullets which rebound on walls and the enemy can do the same. It was quite difficult to program the enemy shooting. Since the bullets can bounce, to check valid shots which the enemy can do becomes very computationally expensive. It was very fun for me to optimise this so that the enemy is intelligent without lagging the game, leading me to do some interesting vector maths.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    This coursework didn't meet all of my personal expectations by the time it was due however I did get 89% in the module. During this summer (2023), I plan to add more features to the game, improving the enemy AI further and diversifying the types of enemies. Additionally I plan to use libraries to help with development such as a proper JSON parser since, during the coursework, we weren't allowed to use any libraries except the wrapper provided meaning I had to make the current JSON parser myself.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="tankGame">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="tankGameSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#tankGameSeeMore" data-parent="#tankGame" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="tankGameSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#tankGameSeeMore" data-parent="#tankGame" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- Dream Keeper -->
+                <div class="col" id="dreamKeeper">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/dreamKeeper.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Dream Keeper
+                                <small>
+                                    <a href="https://github.com/EricLindesay/dreamKeeper" target="_blank">
+                                        Repository 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Personal Project
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    An Android app for recording and managing dreams, featuring advanced tagging, 
+                                    search functionality, and a home screen widget for quick access. 
+                                    Built using Android Studio and a Room database.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="dreamKeeperSeeMore">
+                                    <ul>
+                                        <li>
+                                            Created because I couldn't find an alternative which had the 
+                                            functionality I wanted.
+                                        </li>
+                                        <li>
+                                            Implemented advanced tagging, search functionality by date and text, 
+                                            and a home screen widget for quick access.
+                                        </li>
+                                        <li>
+                                            Built using Android Studio and a Room database, serving as my first 
+                                            Android app project.
+                                        </li>
+                                        <li>
+                                            Designed to streamline dream documentation, retrieval, and sharing.
+                                        </li>
+                                        <li>
+                                            Regularly used for personal dream tracking, with potential for future 
+                                            expansion and app store release.                                        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="dreamKeeper">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="dreamKeeperButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#dreamKeeperSeeMore" aria-expanded="false"
+                                        aria-controls="dreamKeeperSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2022</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2023</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="CompetitiveCoding">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/codeforces.png">
-        <div class="card-title px-3 pt-3">Competitive Coding Problems</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/competitive-coding" target="_blank">Repository Link</a><br><br>I enjoy doing competitive coding problems. They are difficult but very enjoyable, especially when you complete the problem. I use a variety of websites, such as <a href="https://www.codeforces.com" target="_blank">codeforces</a>, <a href="https://leetcode.com/" target="_blank">leetcode</a>, <a href="https://www.codewars.com/" target="_blank">codewars</a> and <a href="https://open.kattis.com/" target="_blank">kattis</a>. The reason for the variety in websites is that I have found certain websites train certain skills. Codeforces tends to have more mathematical problems, kattis has more competition problems and leetcode has more interview questions.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="CompetitiveCodingSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    The reason I do these challenges is because of how much fun I have doing them. I enjoy solving the problems and then optimising my answer so that it passes the harsh time limited test cases. Another reason is that I wanted to learn C++ and these problems have taught me a lot, especially with what data structures to use when.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    These problems all vary massively, some of them are mathematical, others use dynamic programming and others use graph theory. The different websites have different ways of scoring difficulty, however for most problems (excluding some problems for a long time ago) there is a README which describes the problem and my thought process towards the solution. Most of these problems are solved in C++ however some of them use other languages such as Python where it is more appropriate.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    So far, most competitive coding problems I have completed are documented within the GitHub repo linked above, showing the problem as well as my thought process behind my solutions.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="CompetitiveCoding">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="CompetitiveCodingSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="CompetitiveCodingSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#CompetitiveCodingSeeMore" data-parent="#CompetitiveCoding" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- Our Tanks -->
+                <div class="col" id="tankGame">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/tankGame.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Our Tanks
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                University of Nottingham
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    A game, similar to <a href="https://nintendo.fandom.com/wiki/Tanks!" target="_blank">Tanks!</a> 
+                                    on the Wii, in which you control a tank and shoot enemy tanks controlled by AI.
+                                    Developed in C++ using a wrapper around SDL 2, I achieved 89% in this piece of coursework. 
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="tankGameSeeMore">
+                                    <ul>
+                                        <li>
+                                            Developed in C++ using a provided wrapper around SDL 2. This wrapper was
+                                            mandatory for the coursework.
+                                        </li>
+                                        <li>
+                                            Implemented key features including player movement, shooting mechanics,
+                                            efficient collision detection using bitmaps and bullet rebound physics.
+                                        </li>
+                                        <li>
+                                            Used state design pattern to easily change enemy behaviour based on certain
+                                            conditions.
+                                        </li>
+                                        <li>
+                                            Designed and optimized enemy AI, overcoming computational challenges 
+                                            with vector math to ensure intelligent behavior without game lag to allow 
+                                            for bullet rebound prediction.
+                                        </li>
+                                        <li>
+                                            Created a 3-level game structure with levels stored in JSON, enabling 
+                                            easy expansion.
+                                        </li>
+                                        <li>
+                                            Built a custom JSON parser due to the coursework's heavy restrictions 
+                                            on external libraries.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="tankGame">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="tankGameButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#tankGameSeeMore" aria-expanded="false"
+                                        aria-controls="tankGameSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2023</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2022 - Present</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="cfutils">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/cfutils.png">
-        <div class="card-title px-3 pt-3">cfutils</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/cfutils" target="_blank">Repository Link</a><br><br>This is a command line utility Python program that I made to accompany my codeforces challenges (<b>c</b>ode<b>f</b>orces <b>utils</b>). However, I have since expanded it to work for Leetcode and Kattis as well. This tool can automatically create the READMEs for the challenges if given the url (or problem slug). It can also list all the challenges I have attempted, with some useful filters. E.g. filtering by difficulty and only show incomplete problems.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="cfutilsSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    To create the READMEs I initially copy and pasted from the codeforces website and then manually formatted it but this took a few minutes which adds up over time and makes me less motivated to do the problems. To automate this, I made this Python tool. For convenience, I also created a Python program which allows me to list problems I have attempted and also to filter that list.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    The two commands that I use most frequently in this project are cfsetup which takes a url and generates the README and cflist which lists the problems.<br><br>Cfsetup works using the requests library to get the website's HTML and then parse it to get the name, difficulty, description and test cases which are then put into the README. It then makes a directory for the problem, putting it in the right difficulty directory.<br><br>Cflist looks at the directory structure and gets the names and difficulties of the different problems. It also reads the READMEs to get the tags associated for the problem and whether the problem is solved or not and then displays it onto the command line.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    The resulting program is very useful, particularly cflist which allows me to easily return to problems if they take me more than a day to solve. Due to it looking at the HTML, cfsetup doesn't always produce correctly formatted output as the problem may include a scenario I didn't expect for the test cases and certain special characters may not convert properly. However, this isn't a large issue as most of the content will be put into the README meaning that the time to fix the formatting is much less than the time required to copy the data manually.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="cfutils">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="cfutilsSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="cfutilsSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#cfutilsSeeMore" data-parent="#cfutils" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- cfutils -->
+                <div class="col" id="cfutils">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/cfutils.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                cfutils
+                                <small>
+                                    <a href="https://github.com/EricLindesay/cfutils" target="_blank">
+                                        Repository 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Personal Project
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    A collection of utility programs created in Python to assist in competitive
+                                    coding challenges. It automates the creation of problem READMEs from Codeforces, 
+                                    Leetcode and Kattis as well as allowing you to list and filter attempted problems.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="cfutilsSeeMore">
+                                    <ul>
+                                        <li>
+                                            Uses BeautifulSoup to parse Codeforces and Kattis problems as well as
+                                            the Leetcode API to parse Leetcode problems.
+                                        </li>
+                                        <li>
+                                            Extracts and formats problem details, significantly reducing manual 
+                                            effort.
+                                        </li>
+                                        <li>
+                                            Developed a tool to list solved and unsolved problems, enabling 
+                                            efficient tracking and revisiting of challenging problems for improved 
+                                            problem-solving.                                        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="cfutils">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="cfutilsButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#cfutilsSeeMore" aria-expanded="false"
+                                        aria-controls="cfutilsSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2022</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2022</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="matrix">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/matrix.png">
-        <div class="card-title px-3 pt-3">Matrix Calculator</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/matrixCalculator" target="_blank">Repository Link</a><br><br>This is a Python command line tool for matrix maths using argparse and multipledispatch. It was created as a supplement to my learning in the Mathematics for Computer Scientists 2 (MCS2) module.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="matrixSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    In MCS2, we covered matrix maths and manipulation. To help me understand and remember the operations, I created this python program. Additionally, it allowed me to easily create questions for myself and then compare the result to the program's output to see whether I got the question correct or not.<br><br>Another reason I wanted to do this project is (before starting this project) I recently learnt operator overloading in Python so I used this project as an excuse to use and gain familiarity with the functions.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This command line tool allows for 16 commands, based on content that we covered in MCS2. It consists of two main files, matrix.py and matrixLib.py. Matrix.py calls matrixLib.py and is just used for command line arguments and the interpretation of those arguments while matrixLib.py does all of the computation. It also has unit tests using the unittest package which is the first time I used that package and was very useful for confirming the functions were correct.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    This project does all of the matrix calculations I needed and I haven't had a problem with it returning incorrect results. The main difficulty was in Gaussian elimintation and LU factorisation as I had never covered them in maths previously however I got it working and am very pleased about it. These functions may not be as efficient as they could be, however, I wanted to code it similarly to the process that you would take when solving the matrices on paper so that I could easily translate the issues overcome when coding it into knowledge applicable for the exam, on which I got 82%.
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="matrix">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="matrixSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#matrixSeeMore" data-parent="#matrix" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="matrixSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#matrixSeeMore" data-parent="#matrix" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- Matrix -->
+                <div class="col" id="matrix">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/matrix.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Matrix Calculator
+                                <small>
+                                    <a href="https://github.com/EricLindesay/matrixCalculator" target="_blank">
+                                        Repository 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Personal Project
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    A Python command line tool for matrix maths using argparse and 
+                                    multipledispatch. It was created as a supplement to my learning in the 
+                                    Mathematics for Computer Scientists 2 module.                                 
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="matrixSeeMore">
+                                    <ul>
+                                        <li>
+                                            Allows the user to perform 16 matrix maths operations.
+                                        </li>
+                                        <li>
+                                            Implements unit tests to ensure accuracy.
+                                        </li>
+                                        <li>
+                                            Created to reinforce my understanding of matrix concepts such as Gaussian
+                                            elimination and LU factorisation aiding me in exam preparation.
+                                        </li>
+                                        <li>
+                                            Enables users to generate custom examples and verify their solutions 
+                                            by comparing them against the program's output.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="matrix">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="matrixButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#matrixSeeMore" aria-expanded="false"
+                                        aria-controls="matrixSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2022</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2022</small>
-            </div>
-        </div>
-    </div>
-</div><div class="col" id="blockRacingLeague">
-    <div class="card shadow-sm">
-        <img class="img-fluid" src="images/portfolio/blockRacingLeague.png">
-        <div class="card-title px-3 pt-3">Block Racing League</div>
-        <div class="card-subtitle text-muted fst-italic px-3 pb-0">Individual Project</div>
-        <div class="card-body">
-            <p class="border-top pt-3">
-                <a href="https://github.com/EricLindesay/RacingGame" target="_blank">Repository Link</a><br><br>This is a 2D racing game, playable by 2 players, one using WASD and the other using the arrow keys. This was developed in Processing and was my first introduction to the language.
-            </p>
-            <div class="collapse pt-lg-2 seeMoreCollapse" id="blockRacingLeagueSeeMore">
-                <p class="border-top">
-                    <br>
-                    <b>Motivation</b>
-                    <br>
-                    I wanted to make a game and to use Processing as I had never used the language before and wanted to expand my horizons.
-                    <br><br>
-                    <b>Description</b>
-                    <br>
-                    This game has 10 unique levels and is playable by two players who can customise their colours. Certain areas of levels have special effects, including tunnels, sand, ice and teleporters. Both players have to race around the track, collecting the checkpoints and then returning to the start. There also exist some shortcuts in some maps, indicated by a subtle colour change. For the collision, I used a separate black and white collision map which is hidden by the colour version of the map.
-                    <br><br>
-                    <b>Result</b>
-                    <br>
-                    The game has been compiled into an executable and is published on <a href="https://flyingapple1234.itch.io/block-racing-league">itch.io</a> and has been downloaded 85 times (at the time of writing this).
-                </p>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div id="blockRacingLeague">
-                    <!-- The see more button is shown by default, when you click it then hide the See More and show the Hide button -->
-                    <!-- See more button -->
-                    <div class="collapse show" id="blockRacingLeagueSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="See More"
-                            onclick="immediateReload()"></input>
-                    </div>
-                    <!-- Hide button -->
-                    <div class="collapse" id="blockRacingLeagueSeeMore">
-                        <input type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
-                            data-target="#blockRacingLeagueSeeMore" data-parent="#blockRacingLeague" value="Hide"
-                            onclick="delayedReload()"></input>
+
+                <!-- Block Racing League -->
+                <div class="col" id="blockRacingLeague">
+                    <div class="card shadow-sm">
+                        <img class="img-fluid" src="images/portfolio/blockRacingLeague.png">
+                        <div class="card-title px-3 pt-3">
+                            <div class="d-flex justify-content-between">
+                                Block Racing League
+                                <small>
+                                    <a href="https://github.com/EricLindesay/RacingGame" target="_blank">
+                                        Repository 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-muted fst-italic px-3 pb-0">
+                            <div class="d-flex justify-content-between">
+                                Personal Project
+                                <small class="fst-normal">
+                                    <a href="https://flyingapple1234.itch.io/block-racing-league" target="_blank">
+                                        itch.io 
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="border-top">
+                                <p class="fst-italic">
+                                    A 2D racing game playable by two users on the same device. Developed in Processing,
+                                    this was my first introduction to the language.
+                                </p>
+                                <div class="collapse seeMoreCollapse" id="blockRacingLeagueSeeMore">
+                                    <ul>
+                                        <li>
+                                            Designed 10 unique levels with customisable player colors, special effects
+                                            and hidden shortcuts.
+                                        </li>
+                                        <li>
+                                            Implemented collision detection using a collision bitmap to enable fast
+                                            level design.
+                                        </li>
+                                        <li>
+                                            Published on itch.io, having been downloaded 85
+                                        </li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="blockRacingLeague">
+                                <!-- The see more button -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="blockRacingLeagueButton" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#blockRacingLeagueSeeMore" aria-expanded="false"
+                                        aria-controls="blockRacingLeagueSeeMore"
+                                        onclick="immediateReload(this.id)">See More</button>
+                                    <small class="text-body-secondary fst-italic">2019</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <small class="text-body-secondary fst-italic">2019</small>
-            </div>
-        </div>
-    </div>
-</div>
             </div>
         </div>
     </div>

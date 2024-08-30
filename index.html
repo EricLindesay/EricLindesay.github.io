@@ -8,185 +8,268 @@
   <link rel="icon" href="images/CV/icon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <style>
-    div {
-      /* border: 2px dotted red; */
-    }
-  </style>
+  
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body class="bg-body-secondary">
 
-  <div class="container p-3">
-    <!-- First row - Profile, Employment, Education-->
-    <div class="row justify-content-center g-1">
-      <!-- The profile picture and stuff -->
-      <div class="col-lg text-center py-5 px-5 m-3 shadow bg-white">
-        <img class="img-fluid rounded-circle" src="images/CV/profile_pic.png" alt="profile picture">
-        <hr>
-        <p class="fs-2 m-0 pb-0 fw-bold">Eric Lindesay</p>
-        <p class="fs-5 m-0 pt-0 pb-3 fst-italic text-muted">eric@lindesay.com</p>
-        <p class="fs-4">Student at the University of Nottingham
-          <br>
-          Graduating in 2025
-        </p>
+  <div class="album">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-sm-1
+          row-cols-md-1 g-0" id="masonryDiv" data-masonry='{"percentPosition": true }'>
 
-        <a class="fs-5"
-          href="https://www.nottingham.ac.uk/studywithus/ugstudy/courses/UG/Computer-Science-with-Artificial-Intelligence-BSc-Hons-U6UCMPAI.html"
-          target="_blank">Computer Science with Artificial Intelligence (MSci)</a>
-      </div>
-
-      <!-- Employment and Education-->
-      <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
-        <p class="fs-2 fw-bold">Employment</p>
-        <hr>
-        <a class="fs-3" href="https://www.nottingham.ac.uk/dts/help/smart-bar/it-tutor-recruitment.aspx"
-          target="_blank">Student IT
-          Support Tutor</a>
-        <p class="fs-5 fst-italic p-0 mb-0">University of Nottingham<br>
-          2022 - Present</p>
-        <p class="fs-6 p-0 mt-1 mb-2">This role involved helping students and staff of the University at an in person
-          help desk with any technical problems them may have. This ranged from helping them with printing to installing
-          and debugging (potentially unseen) software.</p>
-        <p class="fs-6">This required a high level of communication and technical competence. Additionally, it required
-          teamwork skills as I was required to communicate with other teams within the univeristy (such as Digital and
-          Technical Services) to help resolve some issues and to flag commonly occuring issues.</p>
-
-        <p class="fs-2 fw-bold">Education</p>
-        <hr>
-        <p class="fs-3 p-0 mb-0">University of Nottingham - Year 3</p>
-        <a href="https://www.nottingham.ac.uk/studywithus/ugstudy/courses/UG/Computer-Science-with-Artificial-Intelligence-MSci-Hons-U7UCMPAI.html"
-          target="_blank">
-          <p class="fs-6 mt-1">Computer Science with Artificial Intelligence (MSci)</p>
-        </a>
-        <p class="fs-3 p-0 mb-0">A-Levels</p>
-        <p class="fs-6 mt-1 mb-0">A* - Computer Science, Maths, Further Maths</p>
-      </div>
-    </div>
-
-    <!-- Second row - Projects and skills -->
-    <div class="row justify-content-center g-1">
-      <!-- Projects -->
-      <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
-        <p class="fs-2 fw-bold">Projects</p>
-        <hr>
-        <!-- Link this to /portfolio#MIST -->
-        <p class="fs-3">
-          Medical Image Segmentation Tool (MIST)
-        </p>
-        <p class="fs-6">
-          This was a group project under the supervision of the University in my second year. For this
-          project, I was the Team Leader so I allocated work across the 7 team members and made sure people were doing
-          work to a high quality, as well as writing reports and participating in presentations.
-          I contributed to the code by being the main developer of the front-end which uses the Qt framework in C++.
-        </p>
-        <hr>
-        <p class="fs-3">
-          Dream Keeper
-        </p>
-        <p class="fs-6">
-          This is an Android app I developed for myself which I use to record my dreams, storing them in a
-          local Room database. This was developed in Android Studio and was my first attempt at an Android app which I
-          think went pretty well.
-        </p>
-        <hr>
-        <p class="fs-5 fst-italic">For a full list of projects, please see my <a href="portfolio.html">Portfolio</a></p>
-      </div>
-
-      <!-- Skills table section -->
-      <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
-        <p class="fs-2 fw-bold">Programming Skills</p>
-        <hr>
-        <div class="row justify-content-center">
-          <table class="w-auto table table-borderless table-responsive">
-            <tr>
-              <td class="text-start">Python</td>
-              <td class="text-end fst-italic">6 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">HTML</td>
-              <td class="text-end fst-italic">5 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">CSS</td>
-              <td class="text-end fst-italic">4 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">Java Script</td>
-              <td class="text-end fst-italic">4 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">SQL</td>
-              <td class="text-end fst-italic">4 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">Java</td>
-              <td class="text-end fst-italic">3 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">Processing</td>
-              <td class="text-end fst-italic">2 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">C</td>
-              <td class="text-end fst-italic">2 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">C++</td>
-              <td class="text-end fst-italic">2 years</td>
-            </tr>
-            <tr>
-              <td class="text-start">Android Development</td>
-              <td class="text-end fst-italic">1 year</td>
-            </tr>
-            <tr>
-              <td class="text-start">Haskell</td>
-              <td class="text-end fst-italic">1 year</td>
-            </tr>
-            <tr>
-              <td class="text-start">ARM Assembly</td>
-              <td class="text-end fst-italic">1 year</td>
-            </tr>
-          </table>
+        <!-- Intro -->
+        <div class="col">
+            <div class="col-lg text-center py-5 px-5 m-3 shadow bg-white">
+              <img class="img-fluid rounded-circle" src="images/CV/profile_pic.png" alt="profile picture">
+              <hr>
+              <p class="fs-2 m-0 pb-0 fw-bold">Eric Lindesay</p>
+              <p class="fs-5 m-0 pt-0 pb-3 fst-italic text-muted">eric@lindesay.com</p>
+              <p class="fs-4">Integrated Masters Student<br>University of Nottingham
+                <br>
+                Graduating in 2025
+              </p>
+      
+              <a class="fs-5"
+                href="https://www.nottingham.ac.uk/studywithus/ugstudy/courses/UG/Computer-Science-with-Artificial-Intelligence-including-International-Year-MSci-Hons-U7UCMPAIY.html"
+                target="_blank">Computer Science with Artificial Intelligence (MSci)</a>
+          </div>
         </div>
 
-      </div>
+        <!-- Employment -->
+        <div class="col">
+            <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+              <p class="fs-2 fw-bold">Employment</p>
+              <hr>
+              <a class="fs-3" href="https://www.dataannotation.tech/about?"
+              target="_blank">Data Annotator (Coder)</a>
+              <p class="fs-5 fst-italic p-0 mb-0">DataAnnotation.tech<br>
+                2024 - Present</p>
+              <p class="fs-6 p-0 mt-1 mb-3">
+                DataAnnotation trains Large Language Models (LLMs) for companies through the use of freelance annotators.
+              </p>
+              <p class="fs-6 p-0 mt-1 mb-3">
+                In this role, I conducted data annotation by comparing model responses to various prompts, 
+                primarily related to coding across multiple programming languages, as well as text and image-based prompts. 
+                I do this largely out of term time however, I am planning on increasing the amount I work on it.
+              </p>
 
-    </div>
+              <a class="fs-3" href="https://www.nottingham.ac.uk/dts/help/smart-bar/it-tutor-recruitment.aspx"
+                target="_blank">Senior Smart Bar Assistant</a>
+              <p class="fs-5 fst-italic p-0 mb-0">University of Nottingham<br>
+                2024 - Present</p>
+              <p class="fs-6 p-0 mt-1 mb-3">
+                As an addition to the Smart Bar Assistant responsibilities, this role includes coordinating and 
+                managing a team of assistants as well as using Azure Portal to manage user accounts, for example when 
+                performing MFA resets.
+              </p>
 
-    <!-- Third row  -->
-    <div class="row justify-content-center g-1">
-      <!-- Achievements -->
-      <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
-        <p class="fs-2 fw-bold">Achievements</p>
-        <hr>
-        <p class="m-0 pb-0">
-          Univeristy of Nottingham High Achievers Award - 2022
-        <p class="m-0 pt-0 text-muted fs-6 fst-italic">Awarded to the top 5% of students</p>
-        </p>
-        <p>
-          Member of <a href="https://mensa.org.uk/" target="_blank">MENSA</a> since 2019
-        </p>
-        <!-- Do the margin bottom for correct formatting -->
-        <p class="mb-0">
-          Duke of Edinburgh Award - Bronze
-        </p>
-      </div>
+              <a class="fs-3" href="https://www.nottingham.ac.uk/dts/help/smart-bar/it-tutor-recruitment.aspx"
+                target="_blank">Smart Bar Assistant</a>
+              <p class="fs-5 fst-italic p-0 mb-0">University of Nottingham<br>
+                2022 - 2023</p>
+              <p class="fs-6 p-0 mt-1">
+                The "Smart Bar" is an in-person IT Support service which students and staff of the university can visit for help with their tech problems.
+              </p>
+              <p class="fs-6 p-0 mt-1">
+                As a Smart Bar Assistant, my job is to provide this service and take advantage of my strong communication and technical skills to resolve their problems efficiently.
+              </p>
+            </div>
+        </div>
 
-      <!-- Volunteering -->
-      <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
-        <p class="fs-2 fw-bold">Volunteering</p>
-        <hr>
-        <p class="m-0 pb-0">
-          Sign Language Outreach
-          <p class="m-0 pb-0 text-muted">
-            During unviersity, I joined the Sign Language Society and took part in community outreach events to introduce BSL (British Sign Language) and it's importance to children. Specifically, local <a href="https://www.workingwithkids.co.uk/the-brownies.html" target="_blank">Brownies</a> groups.
-          </p>
-        </p>
+        <!-- Education -->
+        <div class="col">
+          <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+            <p class="fs-2 fw-bold">Education</p>
+            <hr>
+            <p class="fs-3 p-0 mb-0">University of Nottingham - Year 4</p>
+            <a href="https://www.nottingham.ac.uk/studywithus/ugstudy/courses/UG/Computer-Science-with-Artificial-Intelligence-MSci-Hons-U7UCMPAI.html"
+            target="_blank">
+            <p class="fs-5 mt-1">Computer Science with Artificial Intelligence (MSci)</p>
+            </a>
+            <p class="fs-3 p-0 mb-0">A-Levels</p>
+            <div class="row justify-content-center">
+              <table class="fs-5 w-auto table table-borderless table-responsive">
+                <tr>
+                  <td class="text-start">Computer Science</td>
+                  <td class="text-end">A*</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Further Maths</td>
+                  <td class="text-end">A*</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Maths</td>
+                  <td class="text-end">A*</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>  
+        
+        <!-- Projects -->
+        <div class="col">
+            <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+              <p class="fs-2 fw-bold">Projects</p>
+              <hr>
+              <!-- Link this to /portfolio#MIST -->
+              <a href="portfolio.html#MIST" style="color: black; text-decoration: none;">
+                <p class="fs-3 mb-1">
+                  Medical Image Segmentation Tool (MIST)
+                </p>
+              </a>
+              <p class="mt-1 fs-6">
+                As the team leader for a university-supervised project, I led the refactoring of a Medical Image 
+                Segmentation Tool (MIST) from MATLAB into C++ using Qt. The tool, designed for clinicians, can be 
+                used to track tumour growth with enchanced usability and performance while supporting the most popular medical
+                file formats for both 2D and 3D images (e.g. CAT scan results).
+              </p>
+              <hr>
+              <a href="portfolio.html#dreamKeeper" style="color: black; text-decoration: none;">
+                <p class="fs-3 mb-1">
+                  Dream Keeper
+                </p>
+              </a>
+              <p class="fs-6 mt-1">
+                Outside of univeristy, I developed an Android app to record and analyze my dreams, allowing me to 
+                identify trends over time. The app was created to meet specific functionality needs that I couldn't 
+                find in existing applications.
+              </p>
+              <hr>
+              <p class="fs-5 fst-italic">For a full list of projects, please see my <a href="portfolio.html">Portfolio</a></p>
+            </div>
+        </div>
+        <div class="col">
+            <!-- Skills table section -->
+          <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+            <p class="fs-2 fw-bold">Programming Skills</p>
+            <hr>
+            <div class="row justify-content-center">
+              <table class="w-auto table table-borderless table-responsive">
+                <tr>
+                  <td class="text-start">C++</td>
+                  <td class="text-end">&#9733;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Python</td>
+                  <td class="text-end">&#9733;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Java</td>
+                  <td class="text-end">&#9733;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">HTML</td>
+                  <td class="text-end">&#9733;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">SQL</td>
+                  <td class="text-end">&#9734;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">C</td>
+                  <td class="text-end">&#9734;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Android Development</td>
+                  <td class="text-end">&#9734;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">CSS</td>
+                  <td class="text-end">&#9734;&#9733;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">C#</td>
+                  <td class="text-end">&#9734;&#9734;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Java Script</td>
+                  <td class="text-end">&#9734;&#9734;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Haskell</td>
+                  <td class="text-end">&#9734;&#9734;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">MATLAB</td>
+                  <td class="text-end">&#9734;&#9734;&#9733;</td>
+                </tr>
+                <tr>
+                  <td class="text-start">ARM Assembly</td>
+                  <td class="text-end">&#9734;&#9734;&#9733;</td>
+                </tr>
+              </table>
+            </div>
+          </div>  
+        </div>
+        <div class="col">
+          <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+            <p class="fs-2 fw-bold">Achievements</p>
+            <hr>
+            <p class="m-0 pb-0">
+              Univeristy of Nottingham High Achievers Award - 2022
+            <p class="m-0 pt-0 text-muted fs-6 fst-italic">Awarded to the top 5% of students</p>
+            </p>
+            <p>
+              Member of <a href="https://mensa.org.uk/" target="_blank">MENSA</a> since 2019
+            </p>
+            <!-- Do the margin bottom for correct formatting -->
+            <p class="mb-0">
+              Duke of Edinburgh Award - Bronze
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+            <p class="fs-2 fw-bold">Volunteering</p>
+            <hr>
+            <p class="m-0 pb-0">
+              Sign Language Outreach
+              <p class="m-0 pb-0 text-muted">
+                During university, I joined the Sign Language Society and took part in community outreach events to
+                introduce BSL (British Sign Language) and it's importance to children in the community. 
+                Specifically, local 
+                <a href="https://www.workingwithkids.co.uk/the-brownies.html" target="_blank">Brownies</a> groups.
+              </p>
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-lg text-center py-5 px-5 m-3 bg-white shadow">
+            <p class="fs-2 fw-bold">Coding Competitions</p>
+            <hr>
+            <p>
+              One of my hobbies is doing competitive coding problems, including competing in competitions. I have 
+              participated in the <a href="https://ukiepc.info/" target="_blank">UKIEPC</a> three times 
+              (2021, 2022, 2023), <a href="https://codeforces.com" target="_blank">codeforces</a> contests 9 times
+              as well as competitions within the university.
+            </p>
+            <p>
+              These competitions have honed my programming skills particularly by practicing problems on platforms 
+              such as <a href="https://codeforces.com" target="_blank">codeforces</a>, 
+              <a href="https://cses.fi/problemset/" target="_blank">CSES</a> and 
+              <a href="https://open.kattis.com/" target="_blank">Kattis</a> where I've mastered various data 
+              structures. Most recently I have focused on how to efficiently implement Segment Trees 
+              through problems in the CSES problemset.  
+            </p>
+            <p>
+              Additionally, in the 2023 <a href="https://www.hacknotts.com/about" target="_blank">HackNotts</a> 
+              24-hour hackathon, my team won the 'Hackiest Hack' prize for developing a Python program that converts 
+              Verilog hardware description language into a functional circuit within Minecraft.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 
   <!-- Padding for formatting -->
   <div class="py-4"></div>

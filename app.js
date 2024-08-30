@@ -7,11 +7,20 @@ var $grid = $('#masonryDiv').imagesLoaded(function () {
     msnry = new Masonry(grid);
 });
 
-function immediateReload() {
+function immediateReload(button_id) {
+    console.log("ImmediateReload");
+    button = document.getElementById(button_id);
+    if (button.innerHTML == "See More") {
+        button.innerHTML = "See Less";
+    } else {
+        button.innerHTML = "See More";
+    }
     reloadMasonry();
 }
 
-function delayedReload() {
+function delayedReload(button_id) {
+    console.log("delayedReload");
+    document.getElementById(button_id).innerHTML = "See More";
     reloadMasonry();
 }
 
