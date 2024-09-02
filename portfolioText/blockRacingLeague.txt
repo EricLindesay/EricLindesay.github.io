@@ -1,9 +1,0 @@
-nickname | blockRacingLeague
-image | blockRacingLeague.png
-title | Block Racing League
-subtitle | Individual Project
-main | <a href="https://github.com/EricLindesay/RacingGame" target="_blank">Repository Link</a><br><br>This is a 2D racing game, playable by 2 players, one using WASD and the other using the arrow keys. This was developed in Processing and was my first introduction to the language.
-motivation | I wanted to make a game and to use Processing as I had never used the language before and wanted to expand my horizons.
-description | This game has 10 unique levels and is playable by two players who can customise their colours. Certain areas of levels have special effects, including tunnels, sand, ice and teleporters. Both players have to race around the track, collecting the checkpoints and then returning to the start. There also exist some shortcuts in some maps, indicated by a subtle colour change. For the collision, I used a separate black and white collision map which is hidden by the colour version of the map.
-result | The game has been compiled into an executable and is published on <a href="https://flyingapple1234.itch.io/block-racing-league">itch.io</a> and has been downloaded 85 times (at the time of writing this). 
-date | 2019
